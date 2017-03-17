@@ -11,7 +11,10 @@ public interface PostStore {
 	void insetAlaming(String userId, String postId);
 	int deleteAlaming(String userId, String postId);
 	
-	List<Post> selectByAccuse(boolean accuseCondition);	
+	List<String> selectByPostIdFromAccuse(String postId);
+	boolean selectByWriterIdFromAccuse(String postId, String writerId);
+	
+	
 	void insertAccuse(String postId, String writerId, String content);
 	int deleteAccuse(String postId);
 }
