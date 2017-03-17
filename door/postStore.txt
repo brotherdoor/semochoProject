@@ -1,0 +1,17 @@
+public interface PostStore {
+	List<Post> selectByWriterId(String id);
+	List<Post> selectByCategory(String category);
+	List<Post> selectAllPost();
+
+	int insertPost(Post post);
+	int updatePost(Post post);
+	int deletePost(int postId);
+	
+	List<Post> selectByAlaming(String postId);	
+	void insetAlaming(String userId, String postId);
+	int deleteAlaming(String userId, String postId);
+	
+	List<Post> selectByAccuse(boolean accuseCondition);	
+	void insertAccuse(String postId, String writerId, String content);
+	int deleteAccuse(String postId);
+}
