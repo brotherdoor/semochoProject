@@ -9124,34 +9124,12 @@
 							"showShadow": true,
 							"containerChangeable": false,
 							"containerExtending": false,
-							"left": 712,
+							"left": 768,
 							"top": 16,
 							"width": 60,
 							"height": 25,
 							"autoResize": false,
 							"text": "경품이",
-							"wordWrap": true
-						},
-						{
-							"_type": "UMLTextView",
-							"_id": "AAAAAAFa3uElSfTqX1s=",
-							"_parent": {
-								"$ref": "AAAAAAFF+qBtyKM79qY="
-							},
-							"visible": true,
-							"enabled": true,
-							"lineColor": "#000000",
-							"fillColor": "#ffffff",
-							"fontColor": "#000000",
-							"font": "Arial;13;0",
-							"showShadow": true,
-							"containerChangeable": false,
-							"containerExtending": false,
-							"left": 696,
-							"top": 16,
-							"width": 60,
-							"height": 15,
-							"autoResize": false,
 							"wordWrap": true
 						},
 						{
@@ -13719,6 +13697,52 @@
 							"height": 25,
 							"autoResize": false,
 							"text": "댓글이",
+							"wordWrap": true
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAFa3wKOobS1wu0=",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"visible": true,
+							"enabled": true,
+							"lineColor": "#000000",
+							"fillColor": "#ffffff",
+							"fontColor": "#000000",
+							"font": "Arial;13;0",
+							"showShadow": true,
+							"containerChangeable": false,
+							"containerExtending": false,
+							"left": 24,
+							"top": 56,
+							"width": 124,
+							"height": 102,
+							"autoResize": false,
+							"text": "경품등록\n경품삭제\n경품목록\n\n응모자 추가\n응모자 리스트\n경품 추첨",
+							"wordWrap": true
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAFa3wNXZrfmGYA=",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"visible": true,
+							"enabled": true,
+							"lineColor": "#000000",
+							"fillColor": "#ffffff",
+							"fontColor": "#000000",
+							"font": "Arial;13;0",
+							"showShadow": true,
+							"containerChangeable": false,
+							"containerExtending": false,
+							"left": 344,
+							"top": 952,
+							"width": 121,
+							"height": 55,
+							"autoResize": false,
+							"text": "댓글 리스트\n댓글 등록\n댓글 삭제",
 							"wordWrap": true
 						}
 					]
