@@ -18,3 +18,5 @@ public interface PostStore {
 	void insertAccuse(String postId, String writerId, String content);
 	int deleteAccuse(String postId);
 }
+
+수정수정
