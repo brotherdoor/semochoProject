@@ -7720,7 +7720,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertUser(User user )",
+													"text": "+void insertUser(User user )",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -7865,7 +7865,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deleteUser(String id)",
+													"text": "+void deleteUser(String id)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -7894,7 +7894,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean updateUser(User user)",
+													"text": "+void updateUser(User user)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -7981,7 +7981,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertFriend(String userId, String friendId)",
+													"text": "+void insertFriend(String userId, String friendId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8010,7 +8010,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deleteFriend(String userId, String friendId)",
+													"text": "+void deleteFriend(String userId, String friendId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8532,7 +8532,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertPost(Post post)",
+													"text": "+void insertPost(Post post)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8561,7 +8561,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean updatePost(Post post)",
+													"text": "+void updatePost(Post post)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8590,7 +8590,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deletePost(String postId)",
+													"text": "+void deletePost(String postId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8648,7 +8648,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertAlaming(String userId, String postId)",
+													"text": "+void insertAlaming(String userId, String postId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8677,7 +8677,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deleteAlaming(String userId, String postId)",
+													"text": "+void deleteAlaming(String userId, String postId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8764,7 +8764,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertAccuse(String postId, String writerId, String content)",
+													"text": "+void insertAccuse(String postId, String writerId, String content)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8793,7 +8793,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deleteAccuseReset(String postId)",
+													"text": "+void deleteAccuseReset(String postId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -8822,7 +8822,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean selectAccuseCheck(String postId, String userId)",
+													"text": "+void selectAccuseCheck(String postId, String userId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -9228,7 +9228,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertGuestBook(GuestBook guestBook)",
+													"text": "+void insertGuestBook(GuestBook guestBook)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -9257,7 +9257,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean updateGuestBook(GuestBook guestBook)",
+													"text": "+void updateGuestBook(GuestBook guestBook)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -9286,7 +9286,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deleteGuestBook(String guestBookId)",
+													"text": "+void deleteGuestBook(String guestBookId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -9692,7 +9692,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertVoteUser(String choiceId, String userId)",
+													"text": "+void insertVoteUser(String choiceId, String userId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -9774,7 +9774,7 @@
 									"left": 1352,
 									"top": 1536,
 									"width": 353,
-									"height": 113,
+									"height": 118,
 									"autoResize": false,
 									"stereotypeDisplay": "label",
 									"showVisibility": true,
@@ -10011,7 +10011,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertGood(Good good)",
+													"text": "+void insertGood(Good good)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -10040,7 +10040,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deleteGood(String goodId)",
+													"text": "+void deleteGood(String goodId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -10127,7 +10127,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertEnterUsers(String userId, String goodId)",
+													"text": "+void insertEnterUsers(String userId, String goodId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -19347,7 +19347,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean motifyGuestBook(GuestBook guestBook)",
+													"text": "+boolean modifyGuestBook(GuestBook guestBook)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -19376,7 +19376,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean removeGuestBook(String guestBookId)",
+													"text": "+void removeGuestBook(String guestBookId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -19695,7 +19695,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertUser(User user)",
+													"text": "+void insertUser(User user)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -19840,7 +19840,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deleteUser(String id)",
+													"text": "+void deleteUser(String id)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -19869,7 +19869,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean modifyUser(User user)",
+													"text": "+void modifyUser(User user)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -19956,7 +19956,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean insertFriend(String userId, String friendId)",
+													"text": "+void insertFriend(String userId, String friendId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -19985,7 +19985,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deleteFriend(String userId, String friendId)",
+													"text": "+void deleteFriend(String userId, String friendId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -20304,7 +20304,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean registerGood(Good good)",
+													"text": "+void registerGood(Good good)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -20333,7 +20333,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean removeGood(String goodId)",
+													"text": "+void removeGood(String goodId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -20420,7 +20420,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean registerEnterUsers(String userId, String goodId)",
+													"text": "+void registerEnterUsers(String userId, String goodId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -20768,7 +20768,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean registerComment(String postId, Comment comment)",
+													"text": "+void registerComment(String postId, Comment comment)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -20884,7 +20884,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean registerPost(Post post)",
+													"text": "+void registerPost(Post post)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -20913,7 +20913,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean removePost(String postId)",
+													"text": "+void removePost(String postId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -20942,7 +20942,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean modifyPost(Post post)",
+													"text": "+void modifyPost(Post post)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -21000,7 +21000,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean registerAlaming(String userId, String postId)",
+													"text": "+void registerAlaming(String userId, String postId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -21029,7 +21029,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean removeAlaming(String userId, String postId)",
+													"text": "+void removeAlaming(String userId, String postId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -21087,7 +21087,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean registerAccuse(String postId, String writerId, String content)",
+													"text": "+void registerAccuse(String postId, String writerId, String content)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -21116,7 +21116,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+boolean deleteAccuseReset(String postId)",
+													"text": "+void deleteAccuseReset(String postId)",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -26950,7 +26950,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7hl8Qo="
 									},
-									"name": "boolean insertUser",
+									"name": "void insertUser",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -26965,7 +26965,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27092,7 +27091,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7hl8Qo="
 									},
-									"name": "boolean deleteUser",
+									"name": "void deleteUser",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27107,7 +27106,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27124,7 +27122,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7hl8Qo="
 									},
-									"name": "boolean updateUser",
+									"name": "void updateUser",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27139,7 +27137,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27220,7 +27217,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7hl8Qo="
 									},
-									"name": "boolean insertFriend",
+									"name": "void insertFriend",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27235,7 +27232,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27251,7 +27247,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27268,7 +27263,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7hl8Qo="
 									},
-									"name": "boolean deleteFriend",
+									"name": "void deleteFriend",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27283,7 +27278,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27299,7 +27293,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27553,7 +27546,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7iPPKA="
 									},
-									"name": "boolean insertPost",
+									"name": "void insertPost",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27568,7 +27561,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27585,7 +27577,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7iPPKA="
 									},
-									"name": "boolean updatePost",
+									"name": "void updatePost",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27600,7 +27592,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27617,7 +27608,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7iPPKA="
 									},
-									"name": "boolean deletePost",
+									"name": "void deletePost",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27632,7 +27623,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27681,7 +27671,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7iPPKA="
 									},
-									"name": "boolean insertAlaming",
+									"name": "void insertAlaming",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27696,7 +27686,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27712,7 +27701,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27729,7 +27717,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7iPPKA="
 									},
-									"name": "boolean deleteAlaming",
+									"name": "void deleteAlaming",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27744,7 +27732,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27760,7 +27747,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27841,7 +27827,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7iPPKA="
 									},
-									"name": "boolean insertAccuse",
+									"name": "void insertAccuse",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27856,7 +27842,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27872,7 +27857,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27888,7 +27872,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27905,7 +27888,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7iPPKA="
 									},
-									"name": "boolean deleteAccuseReset",
+									"name": "void deleteAccuseReset",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27920,7 +27903,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27937,7 +27919,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7iPPKA="
 									},
-									"name": "boolean selectAccuseCheck",
+									"name": "void selectAccuseCheck",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -27952,7 +27934,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -27968,7 +27949,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -28096,7 +28076,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7ia2yk="
 									},
-									"name": "boolean insertGuestBook",
+									"name": "void insertGuestBook",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -28111,7 +28091,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -28128,7 +28107,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7ia2yk="
 									},
-									"name": "boolean updateGuestBook",
+									"name": "void updateGuestBook",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -28143,7 +28122,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -28160,7 +28138,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7ia2yk="
 									},
-									"name": "boolean deleteGuestBook",
+									"name": "void deleteGuestBook",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -28175,7 +28153,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -28303,7 +28280,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7ikv7E="
 									},
-									"name": "boolean insertVoteUser",
+									"name": "void insertVoteUser",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -28318,7 +28295,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -28334,7 +28310,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -28366,7 +28341,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7ix2tU="
 									},
-									"name": "boolean insertGood",
+									"name": "void insertGood",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -28381,7 +28356,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -28398,7 +28372,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7ix2tU="
 									},
-									"name": "boolean deleteGood",
+									"name": "void deleteGood",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -28413,7 +28387,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -28476,7 +28449,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3worq7ix2tU="
 									},
-									"name": "boolean insertEnterUsers",
+									"name": "void insertEnterUsers",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -28491,7 +28464,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -28507,7 +28479,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30061,7 +30032,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7keUm8="
 									},
-									"name": "boolean motifyGuestBook",
+									"name": "boolean modifyGuestBook",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30093,7 +30064,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7keUm8="
 									},
-									"name": "boolean removeGuestBook",
+									"name": "void removeGuestBook",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30108,7 +30079,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30140,7 +30110,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7k3M8c="
 									},
-									"name": "boolean insertUser",
+									"name": "void insertUser",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30155,7 +30125,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30282,7 +30251,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7k3M8c="
 									},
-									"name": "boolean deleteUser",
+									"name": "void deleteUser",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30297,7 +30266,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30314,7 +30282,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7k3M8c="
 									},
-									"name": "boolean modifyUser",
+									"name": "void modifyUser",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30329,7 +30297,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30410,7 +30377,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7k3M8c="
 									},
-									"name": "boolean insertFriend",
+									"name": "void insertFriend",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30425,7 +30392,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30441,7 +30407,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30458,7 +30423,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7k3M8c="
 									},
-									"name": "boolean deleteFriend",
+									"name": "void deleteFriend",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30473,7 +30438,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30489,7 +30453,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30521,7 +30484,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7lEuRU="
 									},
-									"name": "boolean registerGood",
+									"name": "void registerGood",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30536,7 +30499,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30553,7 +30515,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7lEuRU="
 									},
-									"name": "boolean removeGood",
+									"name": "void removeGood",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30568,7 +30530,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30631,7 +30592,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7lEuRU="
 									},
-									"name": "boolean registerEnterUsers",
+									"name": "void registerEnterUsers",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30646,7 +30607,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30662,7 +30622,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30726,7 +30685,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7ll0qU="
 									},
-									"name": "boolean registerComment",
+									"name": "void registerComment",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30741,7 +30700,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30757,7 +30715,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30852,7 +30809,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7ll0qU="
 									},
-									"name": "boolean registerPost",
+									"name": "void registerPost",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30867,7 +30824,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30884,7 +30840,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7ll0qU="
 									},
-									"name": "boolean removePost",
+									"name": "void removePost",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30899,7 +30855,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30916,7 +30871,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7ll0qU="
 									},
-									"name": "boolean modifyPost",
+									"name": "void modifyPost",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30931,7 +30886,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -30980,7 +30934,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7ll0qU="
 									},
-									"name": "boolean registerAlaming",
+									"name": "void registerAlaming",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -30995,7 +30949,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -31011,7 +30964,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -31028,7 +30980,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7ll0qU="
 									},
-									"name": "boolean removeAlaming",
+									"name": "void removeAlaming",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -31043,7 +30995,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -31059,7 +31010,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -31108,7 +31058,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7ll0qU="
 									},
-									"name": "boolean registerAccuse",
+									"name": "void registerAccuse",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -31123,7 +31073,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -31139,7 +31088,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -31155,7 +31103,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -31172,7 +31119,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFa3woru7ll0qU="
 									},
-									"name": "boolean deleteAccuseReset",
+									"name": "void deleteAccuseReset",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -31187,7 +31134,6 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -42744,6 +42690,64 @@
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFa4Jj/feb7zXU=",
+											"_parent": {
+												"$ref": "AAAAAAFa2tBS775JUvg="
+											},
+											"model": {
+												"$ref": "AAAAAAFa4FlGUGmGCjI="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 525,
+											"top": 1674,
+											"width": 321.19775390625,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+List selectEnterByUser(String userId)",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFa4Jj/fub+H6c=",
+											"_parent": {
+												"$ref": "AAAAAAFa2tBS775JUvg="
+											},
+											"model": {
+												"$ref": "AAAAAAFa4Ft3mnyyr74="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 525,
+											"top": 1689,
+											"width": 321.19775390625,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+Good selectGoodByGoodId(String goodId)",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -42758,7 +42762,7 @@
 									"left": 520,
 									"top": 1579,
 									"width": 331.19775390625,
-									"height": 98,
+									"height": 128,
 									"autoResize": false
 								},
 								{
@@ -42822,7 +42826,7 @@
 							"left": 520,
 							"top": 1544,
 							"width": 331.19775390625,
-							"height": 145,
+							"height": 163,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
@@ -51677,35 +51681,6 @@
 									"subViews": [
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAFa28uEzdvcMrM=",
-											"_parent": {
-												"$ref": "AAAAAAFa26IEHtpnchQ="
-											},
-											"model": {
-												"$ref": "AAAAAAFa28uEm9vZIc8="
-											},
-											"visible": true,
-											"enabled": true,
-											"lineColor": "#000000",
-											"fillColor": "#ffffff",
-											"fontColor": "#000000",
-											"font": "Arial;13;0",
-											"showShadow": true,
-											"containerChangeable": false,
-											"containerExtending": false,
-											"left": 1045,
-											"top": 1184,
-											"width": 423,
-											"height": 13,
-											"autoResize": false,
-											"underline": false,
-											"text": "+List searchRecomendFriendsByCategory(String category)",
-											"horizontalAlignment": 0,
-											"verticalAlignment": 5,
-											"wordWrap": false
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAFa28lnH9u7NTI=",
 											"_parent": {
 												"$ref": "AAAAAAFa26IEHtpnchQ="
@@ -51723,12 +51698,41 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 1045,
-											"top": 1199,
+											"top": 1184,
 											"width": 423,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
 											"text": "+SemoHome searchSemoHome(String userId)",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFa28uEzdvcMrM=",
+											"_parent": {
+												"$ref": "AAAAAAFa26IEHtpnchQ="
+											},
+											"model": {
+												"$ref": "AAAAAAFa28uEm9vZIc8="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 1045,
+											"top": 1199,
+											"width": 423,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+List searchRecomendFriendsByCategory(String category)",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -54930,6 +54934,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -55215,6 +55220,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -55932,6 +55938,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -55947,6 +55954,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -56215,6 +56223,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -56246,6 +56255,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -56951,6 +56961,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -57014,6 +57025,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -57158,7 +57170,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFa26IEG9peJRc="
 							},
-							"name": "boolean motifyGuestBook",
+							"name": "boolean modifyGuestBook",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
@@ -57726,6 +57738,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -57757,6 +57770,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -57788,6 +57802,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -57929,6 +57944,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -58293,6 +58309,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -59012,6 +59029,64 @@
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFa4Jj+hOZciQg=",
+											"_parent": {
+												"$ref": "AAAAAAFa3yfRvWnVFww="
+											},
+											"model": {
+												"$ref": "AAAAAAFa4FlGUGmGCjI="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 1405,
+											"top": 578,
+											"width": 321.19775390625,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+List selectEnterByUser(String userId)",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFa4Jj+iOZfz+8=",
+											"_parent": {
+												"$ref": "AAAAAAFa3yfRvWnVFww="
+											},
+											"model": {
+												"$ref": "AAAAAAFa4Ft3mnyyr74="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 1405,
+											"top": 593,
+											"width": 321.19775390625,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+Good selectGoodByGoodId(String goodId)",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -59026,7 +59101,7 @@
 									"left": 1400,
 									"top": 483,
 									"width": 331.19775390625,
-									"height": 98,
+									"height": 128,
 									"autoResize": false
 								},
 								{
@@ -59090,7 +59165,7 @@
 							"left": 1400,
 							"top": 448,
 							"width": 331.19775390625,
-							"height": 145,
+							"height": 163,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
@@ -60027,6 +60102,35 @@
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFa4Jj+mOZi07Y=",
+											"_parent": {
+												"$ref": "AAAAAAFa3yhhWWn1+yk="
+											},
+											"model": {
+												"$ref": "AAAAAAFa4EaYLzIi01g="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 1413,
+											"top": 1085,
+											"width": 359,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+List selectUserByCategory(String category)",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -60041,7 +60145,7 @@
 									"left": 1408,
 									"top": 915,
 									"width": 369,
-									"height": 173,
+									"height": 188,
 									"autoResize": false
 								},
 								{
@@ -60534,7 +60638,7 @@
 									"left": 1409,
 									"top": 648,
 									"width": 310.2568359375,
-									"height": 173,
+									"height": 113,
 									"autoResize": false
 								},
 								{
