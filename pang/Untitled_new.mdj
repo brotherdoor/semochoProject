@@ -16295,6 +16295,35 @@
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFa38skHc9H5Rk=",
+											"_parent": {
+												"$ref": "AAAAAAFa2tBS775JUvg="
+											},
+											"model": {
+												"$ref": "AAAAAAFa38sj8c9ELZY="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 525,
+											"top": 1674,
+											"width": 321.19775390625,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+boolean updateUser(User user)",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
 										}
 									],
 									"visible": true,
@@ -16309,7 +16338,7 @@
 									"left": 520,
 									"top": 1579,
 									"width": 331.19775390625,
-									"height": 98,
+									"height": 113,
 									"autoResize": false
 								},
 								{
@@ -16373,7 +16402,7 @@
 							"left": 520,
 							"top": 1544,
 							"width": 331.19775390625,
-							"height": 145,
+							"height": 148,
 							"autoResize": false,
 							"stereotypeDisplay": "label",
 							"showVisibility": true,
@@ -29295,6 +29324,38 @@
 										"$ref": "AAAAAAFa22fgD9iUXLU="
 									},
 									"name": "String goodId",
+									"visibility": "public",
+									"isStatic": false,
+									"isLeaf": false,
+									"type": "",
+									"isReadOnly": false,
+									"isOrdered": false,
+									"isUnique": false,
+									"direction": "in"
+								}
+							],
+							"concurrency": "sequential",
+							"isQuery": false,
+							"isAbstract": false
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFa38sj8c9ELZY=",
+							"_parent": {
+								"$ref": "AAAAAAFa2tBS775Ae/s="
+							},
+							"name": "boolean updateUser",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFa38tmZc9L5vU=",
+									"_parent": {
+										"$ref": "AAAAAAFa38sj8c9ELZY="
+									},
+									"name": "User user",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
