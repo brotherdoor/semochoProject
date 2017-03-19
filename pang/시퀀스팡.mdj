@@ -1682,8 +1682,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 682,
-											"top": 156,
+											"left": 425,
+											"top": 148,
 											"width": 125.67724609375,
 											"height": 13,
 											"autoResize": false,
@@ -1717,8 +1717,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 744,
-											"top": 171,
+											"left": 487,
+											"top": 163,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -1751,8 +1751,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 745,
-											"top": 136,
+											"left": 488,
+											"top": 128,
 											"width": 0,
 											"height": 13,
 											"autoResize": false,
@@ -1785,8 +1785,8 @@
 											"showShadow": true,
 											"containerChangeable": false,
 											"containerExtending": false,
-											"left": 587,
-											"top": 152,
+											"left": 87,
+											"top": 144,
 											"width": 14,
 											"height": 25,
 											"autoResize": false
@@ -1802,13 +1802,13 @@
 									"containerChangeable": false,
 									"containerExtending": false,
 									"head": {
-										"$ref": "AAAAAAFa4JrZCJWPzhI="
+										"$ref": "AAAAAAFa3zWJo0gbylU="
 									},
 									"tail": {
 										"$ref": "AAAAAAFa4Jrm0ZWunos="
 									},
 									"lineStyle": 0,
-									"points": "890:152;600:152",
+									"points": "890:144;87:144",
 									"nameLabel": {
 										"$ref": "AAAAAAFa4KH1pD7TAlU="
 									},
@@ -2600,7 +2600,7 @@
 								"$ref": "AAAAAAFa4Jrm0ZWn1aE="
 							},
 							"target": {
-								"$ref": "AAAAAAFa4JrZCJWIn0w="
+								"$ref": "AAAAAAFa3zWJokgUHZM="
 							},
 							"visibility": "public",
 							"messageSort": "reply",
@@ -2782,6 +2782,7 @@
 					"visibility": "public",
 					"isStatic": false,
 					"isLeaf": false,
+					"type": "",
 					"isReadOnly": false,
 					"isOrdered": false,
 					"isUnique": false,
@@ -2835,6 +2836,7 @@
 					"visibility": "public",
 					"isStatic": false,
 					"isLeaf": false,
+					"type": "",
 					"isReadOnly": false,
 					"isOrdered": false,
 					"isUnique": false,
