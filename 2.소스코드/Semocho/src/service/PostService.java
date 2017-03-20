@@ -9,22 +9,35 @@ import domain.Post;
 
 public interface PostService {
 	
-	List<Comment> searchChoice(Choice choice);
-	
 	void registerComment(Comment comment, String postId);
-	void removeComment(String commentId);
-	
 	List<Post> searchPostsByCategory(String Category);
 	List<Post> searchPostsByWriterId(String writerId);
-	Post searchPostById(String postId);
-	List<Post> searchPostsByTitle(String title);
 	List<Post> searchAllPosts();
+	List<Comment> searchChoice(Choice choice);
 	void registerPost(Post post);
 	void removePost(String postId);
+	void modifyPost(Post post);
 	
 	List<Post> searchByAlaming(String userId);
 	void registerAlaming(String userId, String postId);
 	void removeAlaming(String userId, String postId);
+	
+	
+	
+	
+	void removeComment(String commentId);
+	
+	
+	
+	Post searchPostById(String postId);
+	List<Post> searchPostsByTitle(String title);
+	
+	
+	
+	
+	
+	
+	List<Post> 
 	
 	
 
