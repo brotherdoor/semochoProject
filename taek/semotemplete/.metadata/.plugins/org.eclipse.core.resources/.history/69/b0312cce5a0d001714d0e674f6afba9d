@@ -1,0 +1,64 @@
+package Test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class UserStoreLogicTest {
+
+	@Test
+	public void testInsertUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCheckId() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSelectUserByName() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSelectUserById() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSelectAllUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDeleteUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpdateUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCheckFriendById() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSelectAllFriend() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testInsertFriend() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDeleteFriend() {
+		fail("Not yet implemented");
+	}
+
+}

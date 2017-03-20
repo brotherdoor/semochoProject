@@ -1,0 +1,109 @@
+package semo.store.logic;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import semo.domain.User;
+import semo.store.facade.UserStore;
+import semo.store.mapper.UserMapper;
+
+public class UserStoreLogic implements UserStore {
+	
+	public SqlSessionFactory factory;
+	
+	public UserStoreLogic() {
+		factory = SqlSessionFactoryProvider.getSqlSessionFactory();
+	}
+	@Override
+	public void registerUser(User user) {
+		SqlSession session = factory.openSession();
+		try{
+		UserMapper mapper = session.getMapper(UserMapper.class);
+		mapper.registerUser(user);
+		session.commit();
+		}finally{
+			session.close();
+		}
+	}
+	@Override
+	public int checkId(String id) {
+		SqlSession session = factory.openSession();
+		int check = 0;
+		try{
+		UserMapper mapper = session.getMapper(UserMapper.class);
+		check = mapper.checkId(id);
+		session.commit();
+		}finally{
+			session.close();
+		}
+		return check;
+	}
+
+	@Override
+	public List<User> searchUserByName(String name) {
+		SqlSession session = factory.openSession();
+		
+		List<User> list = null;
+		
+		try{
+			UserMapper mapper = session.getMapper(UserMapper.class);
+			list = mapper.searchUserByName(name);
+		}finally{
+			session.close();
+		}
+		return list;
+	}
+	@Override
+	public User searchUserById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> searchUserAll(){
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removeUser(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifyUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public User searchFriendById(String friendId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> searchFriendAll(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int searchFriend(String userId, String friendId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void removeFriend(String userId, String friendId) {
+		
+	}
+
+	
+	
+	
+	
+}

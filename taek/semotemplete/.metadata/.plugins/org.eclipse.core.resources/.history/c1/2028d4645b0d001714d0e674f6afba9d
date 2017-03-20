@@ -1,0 +1,102 @@
+package semo.store.logic;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import semo.domain.User;
+import semo.store.facade.UserStore;
+import semo.store.mapper.UserMapper;
+
+public class UserStoreLogic implements UserStore {
+	
+	public SqlSessionFactory factory;
+	
+	
+	public UserStoreLogic() {
+		factory = SqlSessionFactoryProvider.getSqlSessionFactory();
+	}
+	
+	
+
+	@Override
+	public void insertUser(User user) {
+		SqlSession session = factory.openSession();
+		
+		try{
+		UserMapper mapper = session.getMapper(UserMapper.class);
+		mapper.registerUser(user);
+		session.commit();
+		}finally{
+			session.close();
+		}
+			
+		
+	}
+
+	@Override
+	public boolean checkId(String id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<User> selectUserByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> selectUserById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> selectAllUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUser(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public User checkFriendById(String friendId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> selectAllFriend(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insertFriend(String userId, String friendId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteFriend(String userId, String friendId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+	
+}
