@@ -1,0 +1,22 @@
+<<<<<<< HEAD:2.소스코드/SemochoProject/.settings/org.eclipse.wst.common.project.facet.core.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<faceted-project>
+  <runtime name="Apache Tomcat v9.0"/>
+  <fixed facet="java"/>
+  <fixed facet="wst.jsdt.web"/>
+  <fixed facet="jst.web"/>
+  <installed facet="java" version="1.8"/>
+  <installed facet="jst.web" version="3.0"/>
+  <installed facet="wst.jsdt.web" version="1.0"/>
+</faceted-project>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<faceted-project>
+  <fixed facet="wst.jsdt.web"/>
+  <fixed facet="java"/>
+  <fixed facet="jst.web"/>
+  <installed facet="java" version="1.8"/>
+  <installed facet="jst.web" version="3.0"/>
+  <installed facet="wst.jsdt.web" version="1.0"/>
+</faceted-project>
+>>>>>>> 94096cc1807ca02c939116ae8005ae4e137c7ae0:2.소스코드/Semocho/.settings/org.eclipse.wst.common.project.facet.core.xml
