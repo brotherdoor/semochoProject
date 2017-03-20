@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-package service;
 
-public interface PostService {
-
-}
-=======
 package service;
 
 import java.util.List;
@@ -35,4 +29,4 @@ public interface PostService {
 	
 
 }
->>>>>>> 681edeecdf313e7058f6ac765ff0e6ac77685efe
+
