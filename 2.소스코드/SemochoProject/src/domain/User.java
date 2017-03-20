@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 package domain;
 
-public class User {
-	
-	
-
-}
-=======
-package domain;
 
 public class User {
 	String id;
@@ -22,4 +14,3 @@ public class User {
 	int semo;
 
 }
->>>>>>> 4c4328a582568fb88fc7ed2d3e52024f05eed80b
