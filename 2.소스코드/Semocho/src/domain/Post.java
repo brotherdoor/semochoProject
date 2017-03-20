@@ -1,5 +1,8 @@
 package domain;
 
+import java.sql.Date;
+import java.util.List;
+
 public class Post {
 	
 	String id;
