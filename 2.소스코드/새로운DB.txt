@@ -126,14 +126,15 @@ create table guestbook_tb (
  userid varchar2(50)
  );
  
-drop sequence friends_tb;
-drop sequence semohome_tb; 
-drop sequence guestbook_tb; 
-drop sequence enteruser_tb; 
-drop sequence good_tb; 
-drop sequence alaming_tb; 
-drop sequence post_tb; 
-drop sequence accuse_tb; 
+drop sequence friends_sq;
+drop sequence semohome_sq; 
+drop sequence guestbook_sq; 
+drop sequence enteruser_sq; 
+drop sequence good_sq; 
+drop sequence alaming_sq; 
+drop sequence post_sq;
+drop sequence postAccuse_sq;
+drop sequence accuse_sq; 
  
 CREATE SEQUENCE friends_sq START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE semohome_sq START WITH 1 INCREMENT BY 1;
@@ -142,6 +143,7 @@ CREATE SEQUENCE enteruser_sq START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE good_sq START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE alaming_sq START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE post_sq START WITH 1 INCREMENT BY 1;
+<<<<<<< HEAD
 CREATE SEQUENCE accuse_sq START WITH 1 INCREMENT BY 1;
 
 
@@ -154,5 +156,9 @@ select * from good_tb;
 select * from alaming_tb;
 select * from post_tb;
 select * from accuse_tb;
+=======
+CREATE SEQUENCE postAccuse_sq START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE accuse_sq START WITH 1 INCREMENT BY 1;
+>>>>>>> 875187d36467f64dd06a5596eab753029d3c8b84
  
- commit;
+commit;
