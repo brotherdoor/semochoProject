@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+/constants/
+/domain/
+/service/
+/store/
+=======
+<<<<<<< HEAD
 /domain/
 /service/
 =======
@@ -8,3 +14,4 @@
 /store/
 /contoller/
 >>>>>>> refs/heads/master
+>>>>>>> 681edeecdf313e7058f6ac765ff0e6ac77685efe
