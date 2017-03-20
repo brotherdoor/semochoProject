@@ -5,7 +5,7 @@
   
 <mapper namespace="store.mapper.templeteMapper">
 
-	<resultMap type="Blog" id="blogMap">
+	<resultMap type="Blog" id="blogMap"> <!-- 다들기억나지? -->
 		<id property="id" column="blog_id"/>
 		<result property="title" column="title"/>
 		<association property="author" column="author_id"
