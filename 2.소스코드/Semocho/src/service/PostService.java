@@ -1,5 +1,6 @@
 package service;
 
+<<<<<<< HEAD
 import java.util.List;
 
 import domain.Choice;
@@ -26,5 +27,8 @@ public interface PostService {
 	void removeAlaming(String userId, String postId);
 	
 	
+=======
+public interface PostService {
+>>>>>>> refs/heads/master
 
 }

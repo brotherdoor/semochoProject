@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 /domain/
 /service/
+=======
+/constants/
+/domain/
+/service/
+/store/
+/contoller/
+>>>>>>> refs/heads/master
