@@ -6,6 +6,6 @@ public class testing1 {
 		
 		System.out.println("test");
 		System.out.println("1231313");
-		
+		System.out.println("ㄴ어란어리");
 	}
 }
