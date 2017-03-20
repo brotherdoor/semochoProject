@@ -1,0 +1,8 @@
+package semo.domain;
+public class GuestBook {
+	
+	private String id;
+	private String writerId;
+	private String content;
+
+}
