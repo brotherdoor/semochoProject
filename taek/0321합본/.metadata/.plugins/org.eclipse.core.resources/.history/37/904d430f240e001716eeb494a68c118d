@@ -1,0 +1,8 @@
+package semo.service;
+
+public interface AdminService {
+	
+	
+	
+
+}
