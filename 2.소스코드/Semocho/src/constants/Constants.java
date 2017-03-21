@@ -7,3 +7,7 @@ public class Constants {
 	}
 
 }
+<<<<<<< HEAD
+=======
+	
+>>>>>>> branch 'master' of https://github.com/brotherdoor/semochoProject.git

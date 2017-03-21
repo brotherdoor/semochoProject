@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="semo.store.mapper.UserMapper">
+
+	<resultMap type="User" id="usermap">
+		<id property="id" column="id"/>
+		<result property="password" column="pw"/>
+		<result property="name" column="name"/>
+		<result property="brith" column="brith"/>
+		<result property="tel" column="phonenumber"/>
+		<result property="interest" column="interest"/>
+		<result property="email" column="email"/>
+		<result property="gender" column="gender"/>
+		<result property="grade" column="grade"/>
+		<result property="semo" column="semo"/>
+
+	</resultMap>
+	<sql id="selectUser">
+		select id, pw, name, birth, phonenumber, interest, email, gender, grade, semo
+		from user_tb
+	</sql>
+	<sql id="selectfriend">
+		select friendid
+		from friends_tb
+	</sql>
+	
+	
+	
+	
+	<insert id="registerUser" parameterType="user">
+		INSERT INTO user_tb (id, pw, name, birth, phonenumber, interest, email, gender, grade, semo)
+		VALUES (#{id}, #{password}, #{name}, #{birth}, #{tel}, #{interest}, #{email}, #{gender}, #{grade}, #{semo})
+	</insert>
+	
+	<select id="checkId" parameterType="String" resultType="Boolean">
+		select id
+		from user_tb
+		WHERE id =#{id}
+	</select>
+	
+	<select id="selectUserByName" parameterType="String" resultMap="usermap">
+		<include refid="selectUser"/>
+		WHERE name = #{name}
+	</select>
+	
+	<select id="selectUserById" parameterType="String" resultMap="usermap">
+		<include refid="selectUser"/>
+		WHERE id =${id}
+	</select>
+	<select id="selectUserAll" resultMap="usermap">
+		<include refid="selectUser"/>		
+	</select>
+	
+	<delete id="deleteUser" parameterType="String">
+		DELETE FROM user_tb
+		WHERE id = ${id}
+	</delete>
+	
+	<update id="updateUser" parameterType="User">
+		UPDATE user_tb
+		SET id =#{id} , pw =#{password} , name =#{name} , birth =#{ birth}, phonenumber =#{tel} , interest =#{interest} , email=#{email}, gender=#{gender}, grade=#{grade}, semo=#{semo}
+		WHERE id = #{id}
+	</update>
+	
+	<select id="selectFriendById" parameterType="String" resultMap="usermap">
+		<include refid="selectUser"/>
+		where id = ${id}
+	</select>
+	
+	
+	<select id="selectFriend" parameterType="hashmap" resultType="String">
+		<include refid="selectfriend"/>
+		where userid = #{userid} and friendid = #{friendid}	
+	</select>
+	
+	<delete id="deleteFriend" parameterType="hashmap">
+		delete
+		from friends_tb
+		where userid = #{userid} and friendid = #{friendid}	 
+	</delete>
+	
+	
+	
+	
+	
+	
+</mapper>

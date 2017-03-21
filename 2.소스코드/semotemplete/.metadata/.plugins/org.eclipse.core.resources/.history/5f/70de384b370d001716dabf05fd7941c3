@@ -1,0 +1,15 @@
+
+package semo.domain;
+
+import java.util.List;
+
+public class Choice {
+	
+	private String id;
+	private String content;
+	private Image image;
+	private List<String> users;
+	
+	
+	
+}
