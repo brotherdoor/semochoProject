@@ -7,8 +7,8 @@ public class SemoHome {
 	private User user;
 	private List<Post> posts;
 	private List<GuestBook> guestBooks;
-	private List<String> joins;
-	private List<String> goods;
+	private List<Post> joins;
+	private List<Good> goods;
 	public String getId() {
 		return id;
 	}
@@ -33,17 +33,19 @@ public class SemoHome {
 	public void setGuestBooks(List<GuestBook> guestBooks) {
 		this.guestBooks = guestBooks;
 	}
-	public List<String> getJoins() {
+	public List<Post> getJoins() {
 		return joins;
 	}
-	public void setJoins(List<String> joins) {
+	public void setJoins(List<Post> joins) {
 		this.joins = joins;
 	}
-	public List<String> getGoods() {
+	public List<Good> getGoods() {
 		return goods;
 	}
-	public void setGoods(List<String> goods) {
+	public void setGoods(List<Good> goods) {
 		this.goods = goods;
 	}
+	
+	
 
 }
