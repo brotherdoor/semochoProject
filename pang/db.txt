@@ -1,0 +1,39 @@
+insert into good_tb values(
+good_sq.nextval, '노트북 가지실분!!', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');
+
+insert into good_tb values(
+good_sq.nextval, '세계맥주 꽁짜로 드려요!~', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');
+
+insert into good_tb values(
+good_sq.nextval, '노트북 가지실분!!', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');
+
+insert into good_tb values(
+good_sq.nextval, '노트북 가지실분!!', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');
+
+insert into good_tb values(
+good_sq.nextval, '노트북 가지실분!!', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');
+
+insert into good_tb values(
+good_sq.nextval, '노트북 가지실분!!', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');
+
+insert into good_tb values(
+good_sq.nextval, '노트북 가지실분!!', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');
+
+insert into good_tb values(
+good_sq.nextval, '노트북 가지실분!!', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');
+
+insert into good_tb values(
+good_sq.nextval, '노트북 가지실분!!', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');
+
+insert into good_tb values(
+good_sq.nextval, '노트북 가지실분!!', '초경량 노트북입니다.',
+'삼성노트북', '2017/03/21', '2017/04/30', 'image/jpg', 'notebook');

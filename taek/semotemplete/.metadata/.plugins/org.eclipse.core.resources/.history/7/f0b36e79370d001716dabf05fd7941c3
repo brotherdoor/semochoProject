@@ -1,0 +1,19 @@
+package semo.domain;
+
+import java.sql.Date;
+import java.util.List;
+
+public class Good {
+	
+	private String id;
+	private String title;
+	private String content;
+	private String product;
+	private Date startDate;
+	private Date endDate;
+	private Image image;
+	private int useSemo;
+	private List<String> enterUsers;
+	private List<String> winners;
+
+}

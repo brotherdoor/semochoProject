@@ -1,0 +1,25 @@
+package semo.store.facade;
+
+import java.util.List;
+
+import semo.domain.User;
+
+public interface UserStore {
+	
+	void insertUser(User user);
+	int checkId(String id);
+	
+	List<User> searchUserByName(String name);
+	List<User> searchUserById(String id);
+	List<User> searchAllUser();
+	
+	void deleteUser(String id);
+	void updateUser(User user);
+	
+	User checkFriendById(String friendId);
+	List<User> searchAllFriend(String userId);
+	void registerFriend(String userId, String friendId);
+	void removeFriend(String userId, String friendId);
+
+}
+
