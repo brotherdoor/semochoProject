@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="semo.store.mapper.SemoHomeMapper">
+
+
+	
+	<resultMap type="GuestBook" id="guestBookMap">
+		<id property="id" column="gbnum"/>
+		<result property="writerId" column="userid"/>
+		<result property="content" column="contents"/>
+		<result property="semohomeId" column="semonum"/>
+	</resultMap>
+
+	<insert id="insertGuestBook" parameterType="hashmap">
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			select GuestBook_sq.nextval From Dual
+		</selectKey>
+  		INSERT INTO guestbook_tb(gbnum, userid, contents, semonum)
+  		VALUES (#{id}, #{guestBook.writerId}, #{guestBook.content}, #{semoHomeId})
+  	</insert>
+  	
+  	<update id="updateGuestBook" parameterType="GuestBook">
+ 		UPDATE guestbook_tb
+ 		SET contents=#{content}
+ 		WHERE gbnum = #{id}
+ 	</update>
+ 	
+ 	<delete id="deleteGuestBook" parameterType="String">
+ 		DELETE FROM guestbook_tb
+ 		WHERE gbnum = #{id}
+ 	</delete>
+ 	
+ 	<sql id="selectGuestBook">
+ 		SELECT gbnum, userid, contents
+ 		FROM guestbook_tb
+ 	</sql>
+ 	<select id="selectGuestBook" resultMap="guestBookMap">
+ 		<include refid="selectGuestBook"/>
+ 		ORDER BY gbnum DESC
+ 	</select>
+ 	
+ 	<resultMap type="SemoHome" id="semoHomeMap">
+		<id property="id" column="semonum"/>
+		<association property="user" column="userid"
+			select="semo.store.mapper.UserMapper.searchUserById"
+			javaType="User" jdbcType="VARCHAR"/>
+	</resultMap>
+ 	<select id="selectSemoHome" parameterType="String" resultMap="semoHomeMap"> <!-- 조금 이상 -->
+ 		SELECT semonum, userid
+ 		FROM semohome_tb
+ 		WHERE userid = #{userid}
+ 	</select>
+	
+</mapper>

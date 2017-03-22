@@ -1,0 +1,115 @@
+package semo.store.logic;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import semo.domain.Good;
+import semo.domain.User;
+import semo.store.facade.GoodStore;
+import semo.store.mapper.GoodMapper;
+import semo.store.mapper.UserMapper;
+
+public class GoodStoreLogic implements GoodStore{
+	private SqlSessionFactory factory;
+	
+	public GoodStoreLogic() {
+		factory = SqlSessionFactoryProvider.getSqlSessionFactory();
+	}
+	@Override
+	public void insertGood(Good good) {//
+		SqlSession session = factory.openSession();
+		
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			mapper.insertGood(good);
+			session.commit();
+		}finally{
+			session.close();
+		}
+	}
+
+	@Override
+	public void deleteGood(String goodId) {//
+		SqlSession session = factory.openSession();
+		
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			mapper.deleteGood(goodId);
+			session.commit();
+		}finally{
+			session.close();
+		}
+	}
+
+	@Override
+	public List<Good> selectAllGood() {//
+		SqlSession session = factory.openSession();
+		List<Good> list = null;
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			list = mapper.selectAllGood();
+			session.commit();
+		}finally{
+			session.close();
+		}
+		return list;
+	}
+
+	@Override
+	public List<String> selectWinners(String GoodId) {
+		SqlSession session = factory.openSession();
+		List<String> list = null;
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			list = mapper.selectWinners(GoodId);
+			
+		}finally {
+			session.close();
+		}
+		return list;
+	}
+
+	@Override
+	public void insertEnterUsers(String userId, String goodId) { // 경품응모
+		SqlSession session = factory.openSession();
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("user", userId);
+		map.put("good", new Integer(Integer.parseInt(goodId)));
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			mapper.insertEnterUsers(map);
+			session.commit();
+		}finally{
+			session.close();
+		}
+	}
+
+	@Override
+	public List<String> selectEnterUsers(String goodId) {
+		SqlSession session = factory.openSession();
+		List<String> list = null;
+		
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			list = mapper.selectEnterUsers(goodId);
+			session.commit();
+		}finally{
+			session.close();
+		}
+		return list;
+	}
+	@Override
+	public void insertWinners(String userId, String goodId) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void deleteWinnersGood(String gooId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

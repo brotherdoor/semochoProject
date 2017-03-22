@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="semo.domain.Good"/>
+<fullyQualifiedTypeName name="semo.service.AdminService"/>
+<fullyQualifiedTypeName name="semo.service.GoodService"/>
+<fullyQualifiedTypeName name="semo.store.logic.PostStoreLogic"/>
+<fullyQualifiedTypeName name="semo.store.logic.GoodStoreLogic"/>
+<fullyQualifiedTypeName name="semo.store.logic.UserStoreLogic"/>
+<fullyQualifiedTypeName name="semo.store.logic.ChoiceStoreLogic"/>
+<fullyQualifiedTypeName name="semo.domain.Post"/>
+<fullyQualifiedTypeName name="semo.domain.Comment"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="semo.domain.User"/>
+</qualifiedTypeNameHistroy>
