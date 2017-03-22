@@ -17,6 +17,8 @@ public interface GoodStore {
 	void insertWinners(String userId , String goodId);
 	
 	void deleteWinnersGood(String gooId);
+	Good selectGoodByGoodId(String goodId);
+	List<String> selectGoodIdbyUserId(String userId);
 	
 
 }

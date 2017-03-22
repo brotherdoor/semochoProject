@@ -75,9 +75,9 @@ public class GoodStoreLogic implements GoodStore{
 	@Override
 	public void insertEnterUsers(String userId, String goodId) { // 경품응모
 		SqlSession session = factory.openSession();
-		HashMap<String, String> map = new HashMap<>();
+		HashMap<String, Object> map = new HashMap<>();
 		map.put("user", userId);
-		map.put("good", goodId);
+		map.put("good", new Integer(Integer.parseInt(goodId)));
 		try{
 			GoodMapper mapper = session.getMapper(GoodMapper.class);
 			mapper.insertEnterUsers(map);
@@ -108,6 +108,8 @@ public class GoodStoreLogic implements GoodStore{
 		HashMap<String, String> map = new HashMap<>();
 		map.put("userId", userId);
 		map.put("goodId", goodId);
+		
+		
 		try{
 			GoodMapper mapper = session.getMapper(GoodMapper.class);
 			mapper.insertWinners(map);
@@ -132,6 +134,36 @@ public class GoodStoreLogic implements GoodStore{
 			session.close();
 		}
 		
+	}
+	
+	
+	@Override
+	public List<String> selectGoodIdbyUserId(String userId) {
+		SqlSession session = factory.openSession();
+		List<String> list = null;
+		
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			list = mapper.selectGoodIdbyUserId(userId);
+			session.commit();
+		}finally{
+			session.close();
+		}
+		return list;
+	}
+	@Override
+	public Good selectGoodByGoodId(String goodId) {
+		SqlSession session = factory.openSession();
+		Good good = null;
+		
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			good = mapper.selectGoodByGoodId(goodId);
+			session.commit();
+		}finally{
+			session.close();
+		}
+		return good;
 	}
 
 }
