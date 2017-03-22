@@ -7,10 +7,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import semo.domain.Good;
-import semo.domain.User;
 import semo.store.facade.GoodStore;
 import semo.store.mapper.GoodMapper;
-import semo.store.mapper.UserMapper;
 
 public class GoodStoreLogic implements GoodStore{
 	private SqlSessionFactory factory;
