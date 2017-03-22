@@ -27,19 +27,19 @@ public class SemoHomeServiceLogicTest {
 		service = new SemoHomeServiceLogic();
 	}
 
-//	@Test
-//	public void testSearchSemoHome() {
-//		SemoHome sh = new SemoHome();
-//		sh = service.searchSemoHome("chee");
-//		
-//		assertEquals("2", sh.getId());
-//		assertEquals("ÀÎÄ¡±¤", sh.getUser().getName());
-//		assertEquals(1, sh.getGuestBooks().size());
-//		assertEquals(1, sh.getGoods().size());
-//		assertEquals(1, sh.getPosts().size());
-//		assertEquals(4, sh.getJoins().size());
-//		
-//	}
+	@Test
+	public void testSearchSemoHome() {
+		SemoHome sh = new SemoHome();
+		sh = service.searchSemoHome("chee");
+		
+		assertEquals("2", sh.getId());
+		assertEquals("ÀÎÄ¡±¤", sh.getUser().getName());
+		assertEquals(1, sh.getGuestBooks().size());
+		assertEquals(1, sh.getGoods().size());
+		assertEquals(1, sh.getPosts().size());
+		assertEquals(4, sh.getJoins().size());
+		
+	}
 //
 //	@Test
 //	public void testSearchPostsByUserId() {
@@ -71,16 +71,16 @@ public class SemoHomeServiceLogicTest {
 //	}
 		
 
-	@Test
-	public void testSearchRecommendFriendsByUserId() {
-		List<User> list = new ArrayList<>();
-		list  = service.searchRecommendFriendsByUserId("chee");
-		assertEquals(3, list.size());
-		System.out.println(list.get(0).getName());
-		System.out.println(list.get(1).getName());
-		System.out.println(list.get(2).getName());
-		
-	}
+//	@Test
+//	public void testSearchRecommendFriendsByUserId() {
+//		List<User> list = new ArrayList<>();
+//		list  = service.searchRecommendFriendsByUserId("chee");
+//		assertEquals(3, list.size());
+//		System.out.println(list.get(0).getName());
+//		System.out.println(list.get(1).getName());
+//		System.out.println(list.get(2).getName());
+//		
+//	}
 	
 
 //	@Test
