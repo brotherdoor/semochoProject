@@ -1,0 +1,17 @@
+
+--신고테이블데이터!
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 1, 'hehe');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 2, 'hehe');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 2, 'chee');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 3, 'chee');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 3, 'hehe');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 3, 'pang');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 4, 'pang');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 4, 'door');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 4, 'chee');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 4, 'hehe');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 5, 'hehe');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 5, 'chee');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 5, 'pang');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 5, 'door');
+insert into ACCUSE_TB values(accuse_sq.nextval, '음란해요', 5, 'taek');
