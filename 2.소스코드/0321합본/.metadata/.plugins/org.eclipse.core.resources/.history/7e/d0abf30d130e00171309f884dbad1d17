@@ -1,0 +1,5 @@
+package semo.store;
+
+public interface exampleMapper {
+
+}

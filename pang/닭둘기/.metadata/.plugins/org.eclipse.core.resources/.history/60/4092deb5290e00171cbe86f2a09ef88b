@@ -1,0 +1,51 @@
+package semo.service.logic;
+
+import java.util.List;
+
+import semo.domain.Good;
+import semo.domain.User;
+import semo.service.GoodService;
+import semo.store.facade.GoodStore;
+import semo.store.logic.GoodStoreLogic;
+
+public class GoodServiceLogic implements GoodService{
+	private GoodStore store;
+	
+	public GoodServiceLogic() {
+		store = new GoodStoreLogic();
+	}
+	@Override
+	public void registerGood(Good good) {
+		store.insertGood(good);
+	}
+
+	@Override
+	public void removeGood(String goodId) {
+		store.deleteGood(goodId);
+	}
+
+	@Override
+	public List<Good> searchAllGood() {
+		List<Good> list = store.selectAllGood();
+		return list;
+	}
+
+	@Override
+	public List<User> searchWinners(String goodId) {
+		List<String> list = store.selectWinners(goodId);
+		return null;
+	}
+
+	@Override
+	public void registerEnterUsers(String userId, String goodId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Good> searchEnterUsers(String goodId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

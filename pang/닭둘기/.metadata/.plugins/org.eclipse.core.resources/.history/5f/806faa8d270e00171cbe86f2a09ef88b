@@ -1,0 +1,5 @@
+package semo.service.logic;
+
+public class UserServiceLogic {
+
+}
