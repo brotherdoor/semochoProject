@@ -16,11 +16,11 @@ public class Image {
 	public void setImageType(String imageType) {
 		this.imageType = imageType;
 	}
-	public String getImgaeName() {
+	public String getImageName() {
 		return imageName;
 	}
-	public void setImgaeName(String imgaeName) {
-		this.imageName = imgaeName;
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
 	}
 
 }

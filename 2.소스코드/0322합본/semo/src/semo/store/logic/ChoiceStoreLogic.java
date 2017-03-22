@@ -7,14 +7,13 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import semo.domain.Choice;
-import semo.domain.User;
+
 import semo.store.facade.ChoiceStore;
 import semo.store.mapper.ChoiceMapper;
-import semo.store.mapper.UserMapper;
 
 public class ChoiceStoreLogic implements ChoiceStore{
 	
-	public SqlSessionFactory factory;
+	private SqlSessionFactory factory;
 	
 	public ChoiceStoreLogic() {
 		factory = SqlSessionFactoryProvider.getSqlSessionFactory();
@@ -26,10 +25,11 @@ public class ChoiceStoreLogic implements ChoiceStore{
 		SqlSession session = factory.openSession();
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("choice", choice);
-		map.put("postId", postId);
+		map.put("postId", Integer.parseInt(postId));
 		
 		try{
-			session.insert("insertChoice", map);
+			ChoiceMapper mapper = session.getMapper(ChoiceMapper.class);
+			mapper.insertChoice(map);
 			session.commit();
 			
 		}finally{
@@ -38,7 +38,18 @@ public class ChoiceStoreLogic implements ChoiceStore{
 		
 	}
 
-	
+	@Override
+	public void deleteChoice(String postId) {
+		SqlSession session = factory.openSession();
+		try{
+			ChoiceMapper mapper = session.getMapper(ChoiceMapper.class);
+			mapper.deleteChoice(Integer.parseInt(postId));
+			session.commit();
+		}finally{
+			session.close();
+		}
+	}
+
 	
 	@Override
 	public List<Choice> selectChoice(String postId) {
@@ -100,10 +111,23 @@ public class ChoiceStoreLogic implements ChoiceStore{
 		}finally{
 			session.close();
 		}
-		
-		
 		return check;
 		
+	}
+
+
+	@Override
+	public List<String> selectPostIdbyVoteUser(String userId) { // 치광 작품 에러날 수 있음
+		SqlSession session = factory.openSession();
+		List<String> list =null;
+		
+		try{
+			ChoiceMapper mapper = session.getMapper(ChoiceMapper.class);
+			list = mapper.selectPostIdbyVoteUser(userId);
+		}finally{
+			session.close();
+		}
+		return list;
 	}
 
 }

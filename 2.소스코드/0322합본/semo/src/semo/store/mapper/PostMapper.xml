@@ -49,7 +49,7 @@
 			select comment_sq.nextval FROM DUAL
 		</selectKey>
 	    INSERT INTO comment_tb (commentNum, contents, userId, postNum)
-		VALUES (#{id}, ${comment.content}, ${comment.writerId}, ${postId})
+		VALUES (#{id}, '${comment.content}', '${comment.writerId}', ${postId})
 	</insert>
 	
 	<delete id="deleteComment" parameterType="int">
@@ -89,6 +89,10 @@
 	<insert id="insertPost" parameterType="Post">
 		INSERT INTO post_tb (postNum, userId, title, category, accuseCount, endDate)
 		VALUES (post_sq.nextval, #{writerId}, #{title}, #{category}, 0, #{endDate})
+		<selectKey keyProperty="id" resultType="String" order="AFTER"> 
+			SELECT post_sq.currval FROM dual 
+		</selectKey>
+
 	</insert>
 	
 	<update id="updatePost" parameterType="Post">
@@ -110,12 +114,12 @@
 	
 	<insert id="insertAlaming" parameterType="map">
 		INSERT INTO alaming_tb (alamNum, userId, postId)
-		VALUES (alaming_sq.nextval, ${userId}, ${postId})
+		VALUES (alaming_sq.nextval, '${userId}', ${postId})
 	</insert>
 	
 	<delete id="deleteAlaming" parameterType="map">
 		 DELETE FROM alaming_tb
-		 WHERE userId = ${userId} AND postId = ${postId}
+		 WHERE userId = '${userId}' AND postId = ${postId}
 	</delete>
 	
 	<select id="selectContentByAccuse" parameterType="int" resultType="String">
@@ -127,12 +131,12 @@
 	<select id="checkAccuse" parameterType="map" resultType="String">
 		SELECT content
 		FROM accuse_tb
-		WHERE postNum = ${postNum} AND userId = ${userId}
+		WHERE postNum = ${postNum} AND userId = '${userId}'
 	</select>
 	
 	<insert id="registerAccuse" parameterType="map">
 		INSERT INTO accuse_tb (accuseNum, content, postNum, userId)
-		VALUES (accuse_sq.nextval, ${content}, ${postNum}, ${userId})
+		VALUES (accuse_sq.nextval, '${content}', '${postNum}', '${userId}')
 	</insert>
 	
 	<delete id="deleteAccuse" parameterType="int">

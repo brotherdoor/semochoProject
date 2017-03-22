@@ -18,7 +18,7 @@ public interface PostStore {
 	List<Post> selectPostByTitle(String title);
 	Post selectPost(String postId);
 	List<Post> selectAllPost();
-	void insertPost(Post post);
+	int insertPost(Post post);
 	void updatePost(Post post);
 	void deletePost(String postId);
 	

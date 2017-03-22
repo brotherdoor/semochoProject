@@ -24,62 +24,61 @@ public class PostStoreLogicTest {
 //	@Test
 //	public void testSelectComments() {
 //		List<Comment> list = test.selectComments("1");
-//		System.out.println(list.get(1).getContent());
-//		assertEquals(2, list.size());
+//		assertEquals(1, list.size());
+//		assertEquals("pang", list.get(0).getWriterId());
 //	}
 
 //	@Test
 //	public void testInsertComment() {
 //		Comment c = new Comment();
-//		c.setContent("444");
-//		c.setWriterId("444");
-//		test.insertComment("1", c);
-//		assertEquals(4, test.selectComments("1").size());
+//		c.setContent("111");
+//		c.setWriterId("111");
+//		test.insertComment("6", c);
+//		assertEquals(2, test.selectComments("6").size());
 //	}
 //
 //	@Test
 //	public void testDeleteComment() {
-//		test.deleteComment("23");
-//		assertEquals(3, test.selectComments("1").size());
+//		test.deleteComment("7");
+//		assertEquals(1, test.selectComments("6").size());
 //	}
 
 //	@Test
 //	public void testDeleteCommentByPostId() {
-//		test.deleteCommentByPostId("1");
-//		assertEquals(0, test.selectComments("1").size());
+//		test.deleteCommentByPostId("6");
+//		assertEquals(0, test.selectComments("6").size());
 //	}
 //
 //	@Test
 //	public void testSelectPostByCategory() {
-//		List<Post> list = test.selectPostByCategory("1");
-//		assertEquals(2, list.size());
-//		assertEquals(1, list.get(0).getComments().size());
+//		List<Post> list = test.selectPostByCategory("연예");
+//		assertEquals(1, list.size());
+//		assertEquals("hehe", list.get(0).getWriterId());
 //	}
 //
 //	@Test
 //	public void testSelectPostByWriterId() {
-//		List<Post> list = test.selectPostByWriterId("12");
+//		List<Post> list = test.selectPostByWriterId("door");
 //		assertEquals(1, list.size());
-//		assertEquals("11", list.get(0).getId());
+//		assertEquals("이거 무슨 색으로 보여요?", list.get(0).getTitle());
 //	}
 //
 //	@Test
 //	public void testSelectPostByTitle() {
-//		List<Post> list = test.selectPostByTitle("a");
+//		List<Post> list = test.selectPostByTitle("소");
 //		assertEquals(1, list.size());
 //	}
 //
 //	@Test
 //	public void testSelectPost() {
 //		Post post = test.selectPost("1");
-//		assertEquals(true, post.isAccuseCondition());
+//		assertEquals("pang", post.getWriterId());
 //	}
 //
 //	@Test
 //	public void testSelectAllPost() {
 //		List<Post> list = test.selectAllPost();
-//		assertEquals(2, list.size());
-//		System.out.println(list.get(1).getWriterId());
+//		assertEquals(5, list.size());
 //	}
 //
 //	@Test
@@ -89,81 +88,77 @@ public class PostStoreLogicTest {
 //		p.setCategory("1");
 //		p.setEndDate(d);
 //		p.setTitle("abc");
-//		p.setWriterId("12");
+//		p.setWriterId("door");
 //		test.insertPost(p);
-//		assertEquals(3, test.selectAllPost().size());
+//		assertEquals(6, test.selectAllPost().size());
 //	}
 //
 //	@Test
 //	public void testUpdatePost() {
 //		Post p = new Post();
 //		Date d = new Date(2017, 11, 19);
-//		p.setId("2");
+//		p.setId("6");
 //		p.setCategory("upup");
 //		p.setEndDate(d);
 //		p.setTitle("update");
-//		p.setWriterId("12");
+//		p.setWriterId("door");
 //		test.updatePost(p);
-//		assertEquals(1, test.selectPostByTitle("up").size());
+//		assertEquals(2, test.selectPostByTitle("up").size());
 //		assertEquals("upup", test.selectPostByTitle("up").get(0).getCategory());
 //	}
 //
 //	@Test
 //	public void testDeletePost() {
-//		test.deletePost("11");
-//		assertEquals(2, test.selectAllPost().size());
+//		test.deletePost("6");
+//		assertEquals(5, test.selectAllPost().size());
 //	}
 //
 //	@Test
 //	public void testSelectAlaming() {
-//		List<String> list = test.selectAlaming("1");
-//		assertEquals(1, list.size());
-//		assertEquals("1", list.get(0));
+//		List<String> list = test.selectAlaming("pang");
+//		assertEquals(4, list.size());
 //	}
 //
 //	@Test
 //	public void testInsertAlaming() {
-//		test.insertAlaming("2", "2");
-//		assertEquals(1, test.selectAlaming("2").size());
+//		test.insertAlaming("door", "2");
+//		assertEquals(2, test.selectAlaming("door").size());
 //	}
 //
 //	@Test
 //	public void testDeleteAlaming() {
-//		test.deleteAlaming("1", "1");
-//		assertEquals(0, test.selectAlaming("1").size());
-//		assertEquals(1, test.selectAlaming("2").size());
+//		test.deleteAlaming("pang", "2");
+//		assertEquals(3, test.selectAlaming("pang").size());
 //	}
 //
 //	@Test
 //	public void testSelectContentByAccuse() {
-//		List<String> list = test.selectContentByAccuse("1");
-//		assertEquals(2, list.size());
-//		System.out.println(list.get(0));
+//		List<String> list = test.selectContentByAccuse("4");
+//		assertEquals(4, list.size());
 //	}
 //
 //	@Test
 //	public void testCheckAccuse() {
-//		assertEquals(true, test.checkAccuse("11", "11"));
-//		assertEquals(false, test.checkAccuse("1", "1"));
+//		assertEquals("음란해요", test.checkAccuse("1", "hehe"));
 //	}
 //
 //	@Test
 //	public void testRegisterAcuuse() {
-//		test.registerAccuse("3", "3", "3");
-//		assertEquals(false, test.checkAccuse("3", "3"));
+//		test.registerAccuse("1", "door", "나니");
+//		assertEquals(false, test.checkAccuse("1", "door"));
 //		
 //	}
 //
 //	@Test
 //	public void testDeleteAccuse() {
-//		test.deleteAccuse("3");
-//		assertEquals(true, test.checkAccuse("3", "3"));
+//		test.deleteAccuse("1");
+//		assertEquals(true, test.checkAccuse("1", "door"));
 //	}
 //
-//	@Test
-//	public void testUpdateAccuseTb() {
-//		test.updateAccusePostTb("2");
-//		
-//	}
+	@Test
+	public void testUpdateAccuseTb() {
+		test.updateAccusePostTb("1");
+		
+	}
 
 }

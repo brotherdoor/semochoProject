@@ -20,7 +20,7 @@ public interface PostMapper {
 	List<Post> selectPostByTitle(Map<String, String> map);
 	Post selectPost(int postId);
 	List<Post> selectAllPost();
-	void insertPost(Post post);
+	int insertPost(Post post);
 	void updatePost(Post post);
 	void deletePost(int postId);
 	

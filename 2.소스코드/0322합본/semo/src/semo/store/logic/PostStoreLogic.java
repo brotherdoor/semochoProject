@@ -141,12 +141,13 @@ public class PostStoreLogic implements PostStore{
 	}
 
 	@Override
-	public void insertPost(Post post) {
+	public int insertPost(Post post) {
 		SqlSession session = factory.openSession();
 		try{
 			PostMapper mapper = session.getMapper(PostMapper.class);
-			mapper.insertPost(post);
+			int result = mapper.insertPost(post);
 			session.commit();
+			return result;
 		}finally{
 			session.close();
 		}
