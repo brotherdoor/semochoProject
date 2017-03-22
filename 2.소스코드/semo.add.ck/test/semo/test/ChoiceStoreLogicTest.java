@@ -70,5 +70,14 @@ public class ChoiceStoreLogicTest {
 //		
 //		assertEquals("1", store.checkVote("1", "33"));
 //	}
+<<<<<<< HEAD
+=======
+	
+	@Test
+	public void testDeleteChoice(){
+		store.deleteChoice("1");
+
+	}
+>>>>>>> refs/heads/door2
 
 }

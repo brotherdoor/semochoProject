@@ -12,6 +12,10 @@ public interface ChoiceStore {
 	List<String> selectVoteUsers(String choiceId);
 	List<String> selectPostIdbyVoteUser(String userId);
 	 
+<<<<<<< HEAD
+=======
+	void deleteChoice(String postId);
+>>>>>>> refs/heads/door2
 	void insertVoteUser(Choice choice, String userId);
 	
 	String checkVote(String postId, String userId);
