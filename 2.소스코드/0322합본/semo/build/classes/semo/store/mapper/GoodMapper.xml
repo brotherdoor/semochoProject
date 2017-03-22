@@ -22,18 +22,6 @@
 	</resultMap>
 
 
-	<resultMap type="User" id="userMap">
-		<id property="id" column="id"/>
-		<result property="password" column="pw"/>
-		<result property="name" column="name"/>
-		<result property="brith" column="brith"/>
-		<result property="tel" column="phonenumber"/>
-		<result property="interest" column="interest"/>
-		<result property="email" column="email"/>
-		<result property="gender" column="gender"/>
-		<result property="grade" column="grade"/>
-		<result property="semo" column="semo"/>
-	</resultMap>
 
 
 
@@ -64,9 +52,9 @@
 		WHERE goodNum =#{id}
 	</delete>
 
-	<insert id="insertEnterUsers" parameterType="hashmap">
-		insert into enteruser_tb (enterNum, userId, goodNum)
-		values (enteruser_sq.nextval ,${user}, ${good})
+	<insert id="insertEnterUsers" parameterType="map">
+		insert into enteruser_tb (ENTERNUM, USERID, GOODNUM)
+		values (enteruser_sq.nextval, #{user}, #{good})
 	</insert>
 	
 	<select id="selectEnterUsers" parameterType="String" resultType="String">
@@ -77,15 +65,9 @@
 	</select>
 	
 	
-	
-	
-	
-	
-	
-	
 	<insert id="insertWinners" parameterType="map">
 		INSERT INTO WINNER_TB (WINNERNUM, USERID, GOODNUM)
-		VALUES (winner_sq.nextval, ${userId}, ${goodId})
+		VALUES (winner_sq.nextval, '${userId}', ${goodId})
 	</insert>
 
 	<delete id="deleteWinnersGood" parameterType="string">

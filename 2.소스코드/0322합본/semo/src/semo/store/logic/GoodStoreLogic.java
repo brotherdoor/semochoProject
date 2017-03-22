@@ -75,9 +75,9 @@ public class GoodStoreLogic implements GoodStore{
 	@Override
 	public void insertEnterUsers(String userId, String goodId) { // 경품응모
 		SqlSession session = factory.openSession();
-		HashMap<String, Object> map = new HashMap<>();
+		HashMap<String, String> map = new HashMap<>();
 		map.put("user", userId);
-		map.put("good", new Integer(Integer.parseInt(goodId)));
+		map.put("good", goodId);
 		try{
 			GoodMapper mapper = session.getMapper(GoodMapper.class);
 			mapper.insertEnterUsers(map);
@@ -108,8 +108,6 @@ public class GoodStoreLogic implements GoodStore{
 		HashMap<String, String> map = new HashMap<>();
 		map.put("userId", userId);
 		map.put("goodId", goodId);
-		
-		
 		try{
 			GoodMapper mapper = session.getMapper(GoodMapper.class);
 			mapper.insertWinners(map);

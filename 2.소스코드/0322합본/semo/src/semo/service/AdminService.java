@@ -2,7 +2,6 @@ package semo.service;
 
 import java.util.List;
 
-import semo.domain.Comment;
 import semo.domain.Good;
 import semo.domain.Post;
 import semo.domain.User;

@@ -1,5 +1,6 @@
 package semo.service.logic;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -36,8 +37,8 @@ public class AdminServiceLogic implements AdminService{
 	@Override
 	public List<Post> findAccuseAll() {
 		
-		List<Post> list = null;
-		List<Post> accuses= null;
+		List<Post> list = new ArrayList<>();
+		List<Post> accuses= new ArrayList<>();
 		
 		//모든 게시물을 가져온다
 		list = postStore.selectAllPost();
@@ -83,18 +84,23 @@ public class AdminServiceLogic implements AdminService{
 	@Override
 	public List<User> registerWinners(int items, String goodId) {
 		Random random = new Random();
-		List<User> list =null;
+		List<User> list =new ArrayList<>();
 		List<String> enter = null;
 		enter = goodStore.selectEnterUsers(goodId);
+		
 		for(int i=0; i<items; i++){
-			
 		//불러온 응모자 userId 리스트에서 random 번째 유저아이디로 사용자정보를 찾아 당첨자 리스트에 추가한다.
 		int ran = random.nextInt(enter.size());
 		list.add(userStore.searchUserById(enter.get(ran)));
 		//당첨자는 응모자 리스트에서 제거
 		enter.remove(ran);
-				
 		}
+		
+		for(User u :list){
+			goodStore.insertWinners(u.getId(), goodId);
+		}
+		
+		
 		return list;
 	}
 
