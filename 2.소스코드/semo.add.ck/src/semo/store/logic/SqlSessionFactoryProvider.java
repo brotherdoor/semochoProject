@@ -7,6 +7,11 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> refs/heads/door2
 public class SqlSessionFactoryProvider {
 	private static final String resource = "semo/store/config.xml";
 	

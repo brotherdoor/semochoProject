@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import semo.domain.Choice;
+<<<<<<< HEAD
 import semo.domain.User;
 import semo.store.facade.ChoiceStore;
 import semo.store.mapper.ChoiceMapper;
@@ -39,6 +40,48 @@ public class ChoiceStoreLogic implements ChoiceStore{
 	}
 
 	
+=======
+import semo.store.facade.ChoiceStore;
+import semo.store.mapper.ChoiceMapper;
+
+public class ChoiceStoreLogic implements ChoiceStore{
+	
+	private SqlSessionFactory factory;
+	
+	public ChoiceStoreLogic() {
+		factory = SqlSessionFactoryProvider.getSqlSessionFactory();
+	}
+	
+
+	@Override
+	public void insertChoice(Choice choice, String postId) {
+		SqlSession session = factory.openSession();
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("choice", choice);
+		map.put("postId", postId);
+		
+		try{
+			session.insert("insertChoice", map);
+			session.commit();
+			
+		}finally{
+			session.close();
+		}
+		
+	}
+
+	@Override
+	public void deleteChoice(String postId) {
+		SqlSession session = factory.openSession();
+		try{
+			ChoiceMapper mapper = session.getMapper(ChoiceMapper.class);
+			mapper.deleteChoice(Integer.parseInt(postId));
+			session.commit();
+		}finally{
+			session.close();
+		}
+	}
+>>>>>>> refs/heads/door2
 	
 	@Override
 	public List<Choice> selectChoice(String postId) {

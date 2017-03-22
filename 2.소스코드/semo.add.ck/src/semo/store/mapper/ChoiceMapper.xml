@@ -22,6 +22,14 @@
 		<result property="imgaeName" column="imgaeName"/>
 	</resultMap>
 	
+<<<<<<< HEAD
+=======
+	<delete id="deleteChoice" parameterType="int">
+		DELETE FROM choice_tb
+		WHERE postNum = #{num}
+	</delete>
+	
+>>>>>>> refs/heads/door2
 
 	
 	<select id="selectUserByVote" parameterType="String" resultType="String">

@@ -37,8 +37,9 @@
  		SELECT gbnum, userid, contents
  		FROM guestbook_tb
  	</sql>
- 	<select id="selectGuestBook" resultMap="guestBookMap">
+ 	<select id="selectGuestBook" parameterType="String" resultMap="guestBookMap">
  		<include refid="selectGuestBook"/>
+ 		Where semohomeid = #{semoHomeId}
  		ORDER BY gbnum DESC
  	</select>
  	
@@ -47,6 +48,12 @@
 		<association property="user" column="userid"
 			select="semo.store.mapper.UserMapper.searchUserById"
 			javaType="User" jdbcType="VARCHAR"/>
+		<collection property="posts" column="userid" ofType="Post" 
+			select="semo.store.mapper.PostMapper.findPostByWriterId"
+			javaType="ArrayList" jdbcType="VARCHAR"/>
+		<collection property="guestBooks" column="userid" ofType="GuestBook" 
+			select="semo.store.mapper.SemoHomeMapper.selectGuestBook"
+			javaType="ArrayList" jdbcType="VARCHAR"/>
 	</resultMap>
  	<select id="selectSemoHome" parameterType="String" resultMap="semoHomeMap"> <!-- 조금 이상 -->
  		SELECT semonum, userid

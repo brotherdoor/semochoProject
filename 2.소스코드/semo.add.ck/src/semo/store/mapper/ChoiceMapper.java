@@ -14,6 +14,11 @@ public interface ChoiceMapper {
 	List<String> selectVoteUsers(String choiceId);
 	List<String> selectPostIdbyVoteUser(String userId);
 	
+<<<<<<< HEAD
+=======
+	void deleteChoice(int postId);
+	
+>>>>>>> refs/heads/door2
 	void insertVoteUser(Map<String, Integer> map);
 	
 	String checkVote(Map<String, String> map);

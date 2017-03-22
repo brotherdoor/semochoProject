@@ -10,9 +10,5 @@ public class Choice {
 	Image image;
 	List<String> users;
 
-	String id;
-	String content;
-	Image image;
-	List<String> users;
 
 }

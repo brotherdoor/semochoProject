@@ -22,6 +22,14 @@
 		<result property="imgaeName" column="imgaeName"/>
 	</resultMap>
 	
+<<<<<<< HEAD
+=======
+	<delete id="deleteChoice" parameterType="int">
+		DELETE FROM choice_tb
+		WHERE postNum = #{num}
+	</delete>
+	
+>>>>>>> refs/heads/door2
 
 	
 	<select id="selectUserByVote" parameterType="String" resultType="String">
@@ -72,6 +80,12 @@
 		select votenum
 		from vote_tb
 		where postnum= #{postId} and userid =#{userId}
+	</select>
+	
+	<select id="selectPostIdbyVoteUser" parameterType="Stirng" resultType="String">
+		select postnum
+		from vote_tb
+		where userid = #{userid}
 	</select>
 	
 	

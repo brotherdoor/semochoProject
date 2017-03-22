@@ -93,6 +93,16 @@
 		WHERE GOODNUM =#{goodId}
 	</delete>
 	
-
+	
+	<select id="selectEnterUsers" parameterType="String" resultType="String"> <!--치광작품 문의바람-->
+	 	select goodnum
+	 	from enteruser_tb
+	 	where userid = #{goodId}
+	</select>
+	
+	<select id="selectGoodByGoodId" parameterType="String" resultMap="goodMap"> <!--치광작품 문의바람-->
+	 	<include refid="selectGood"/>
+	 	where goodnum = #{goodId}
+	</select>
 
 </mapper>
