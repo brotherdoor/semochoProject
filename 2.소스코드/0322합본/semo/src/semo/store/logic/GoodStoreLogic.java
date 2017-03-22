@@ -135,5 +135,35 @@ public class GoodStoreLogic implements GoodStore{
 		}
 		
 	}
+	
+	
+	@Override
+	public List<String> selectGoodIdbyUserId(String userId) {
+		SqlSession session = factory.openSession();
+		List<String> list = null;
+		
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			list = mapper.selectGoodIdbyUserId(userId);
+			session.commit();
+		}finally{
+			session.close();
+		}
+		return list;
+	}
+	@Override
+	public Good selectGoodByGoodId(String goodId) {
+		SqlSession session = factory.openSession();
+		Good good = null;
+		
+		try{
+			GoodMapper mapper = session.getMapper(GoodMapper.class);
+			good = mapper.selectGoodByGoodId(goodId);
+			session.commit();
+		}finally{
+			session.close();
+		}
+		return good;
+	}
 
 }

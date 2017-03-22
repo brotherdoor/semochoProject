@@ -17,4 +17,7 @@ public interface GoodMapper {
 	void insertWinners(Map<String, String> map);
 	void deleteWinnersGood(String gooId);
 	
+	List<String> selectGoodIdbyUserId(String userId); //Ä¡±¤ÀÛÇ°
+	Good selectGoodByGoodId(String goodId); //Ä¡±¤ÀÛÇ°
+	
 }
