@@ -236,11 +236,11 @@ p.site-slogan {
 }
 .text-light [class^="fa-"]:before,
 .text-light [class*=" fa-"]:before {
-  color: rgba(255, 255, 255, 0.3);
+  color: black;
 }
 .text-light li:hover [class^="fa-"]:before,
 .text-light li:hover [class*=" fa-"]:before {
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 .color-default {
   color: #555555 !important;
@@ -761,12 +761,12 @@ p.site-slogan {
 }
 #hornav ul > li > a:hover,
 #hornav ul > li > span:hover,
-#hornav ul > li > a.active,
-#hornav ul > li > span.active,
+#hornav ul > li > a,
+#hornav ul > li > span,
 #hornav ul > li > a.current,
 #hornav ul > li > span.current {
   background: none;
-  color: #ffffff;
+  color: black;
 }
 /* Dropdown Menu */
 #hornav ul ul {
@@ -2118,7 +2118,7 @@ ul.grid li:first-child a {
   background: #d0b426;
   color: #FFFFFF;
 }
-.panel-brown {
+.panel-bn {
   border-color: #6f6f55;
 }
 .panel-brown > .panel-heading {

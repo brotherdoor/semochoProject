@@ -1,6 +1,11 @@
 package semo.controller;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,6 +32,8 @@ public class ChoiceImageController extends HttpServlet {
 
 		String fileName = null;
 		InputStream in = null;
+		Image rImage = post.getChoiceRight().getImage();
+		
 
 		if (rImage != null) {
 			response.setContentType(rImage.getContentType());
