@@ -30,7 +30,7 @@ public class AccuseListController extends HttpServlet {
 		req.setAttribute("accuseList", list);
 		System.out.println(list.size());
 		
-		req.getRequestDispatcher("test.jsp").forward(req, resp);
+		req.getRequestDispatcher("accuse.jsp").forward(req, resp);
 		
 		
 		

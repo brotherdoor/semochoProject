@@ -17,6 +17,7 @@
 		<typeAlias  type="semo.domain.GuestBook" alias="GuestBook"/>
 		<typeAlias  type="semo.domain.Image" alias="Image"/>
 		<typeAlias  type="semo.domain.User" alias="User"/>
+		<typeAlias  type="semo.domain.Comment" alias="AccuseComment"/>
 	</typeAliases>
 	
   
