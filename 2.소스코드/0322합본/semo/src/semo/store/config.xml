@@ -12,6 +12,7 @@
 		<typeAlias  type="semo.domain.Choice" alias="Choice"/>
 		<typeAlias  type="semo.domain.Post" alias="Post"/>
 		<typeAlias  type="semo.domain.Comment" alias="Comment"/>
+		<typeAlias  type="semo.domain.Comment" alias="AccuseComment"/>
 		<typeAlias  type="semo.domain.Good" alias="Good"/>
 		<typeAlias  type="semo.domain.GuestBook" alias="GuestBook"/>
 		<typeAlias  type="semo.domain.Image" alias="Image"/>
