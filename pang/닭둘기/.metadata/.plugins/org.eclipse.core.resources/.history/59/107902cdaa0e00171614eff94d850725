@@ -1,0 +1,25 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class GoodServiceLogicTest {
+
+	@Before
+	public void setUp(){
+		
+	}
+
+	@Test
+	public void testSearchAllGood() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRegisterEnterUsers() {
+		fail("Not yet implemented");
+	}
+
+}

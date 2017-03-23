@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="semo.store.mapper.GoodMapper">
+
+	<resultMap type="Good" id="goodMap">
+		<id property="id" column="goodNum" />
+		<result property="title" column="title" />
+		<result property="content" column="contents" />
+		<result property="product" column="product" />
+		<result property="startDate" column="startDate" />
+		<result property="endDate" column="endDate" />
+		<association property="image" column="goodNum"
+		select ="semo.store.mapper.GoodMapper.selectImage"
+		javaType="Tmage" jdbcType="varchar" />
+	</resultMap>
+
+
+	<resultMap type="Image" id="image">
+		<result property="imageType" column="imageType" />
+		<result property="imageName" column="imageName" />
+	</resultMap>
+
+
+	<resultMap type="User" id="userMap">
+		<id property="id" column="id"/>
+		<result property="password" column="pw"/>
+		<result property="name" column="name"/>
+		<result property="brith" column="brith"/>
+		<result property="tel" column="phonenumber"/>
+		<result property="interest" column="interest"/>
+		<result property="email" column="email"/>
+		<result property="gender" column="gender"/>
+		<result property="grade" column="grade"/>
+		<result property="semo" column="semo"/>
+	</resultMap>
+
+
+
+
+	<sql id="selectGood">
+		SELECT goodNum, title, contents, product, startDate,
+		endDate, imageType, imageName
+		FROM good_tb
+	</sql>
+	<sql id = "selectwin">
+		select id, pw, name, birth, phonenumber, interest, email, gender, grade, semo
+		from user_tb
+	</sql>
+
+	<select id="selectAllGood" resultMap="goodMap">
+		<include refid="selectGood"></include>
+	</select>
+
+	<insert id="insertGood" parameterType="Good">
+		INSERT INTO good_tb (goodNum, title, contents, product, startDate, endDate, imageType, imageName)
+		VALUES (good_sq.nextval, #{title}, #{content}, 
+		#{product}, #{startDate}, #{endDate}, #{image.imageType},
+		#{image.imageName})
+	</insert>
+
+	<delete id="deleteGood" parameterType="string">
+		DELETE FROM good_tb
+		WHERE goodNum =#{id}
+	</delete>
+
+	<insert id="insertEnterUsers" parameterType="hashmap">
+		insert into enteruser_tb (enterNum, userId, goodNum)
+		values (enteruser_sq.nextval ,${user}, ${good})
+	</insert>
+	
+	<select id="selectEnterUsers" parameterType="String" resultType="String">
+	 	select userid
+	 	from enteruser_tb
+	 	where goodnum = #{id}
+	 	
+	</select>
+	
+	
+	
+	
+	
+	
+	
+	
+	<insert id="insertWinners" parameterType="map">
+		INSERT INTO WINNER_TB (WINNERNUM, USERID, GOODNUM)
+		VALUES (winner_sq.nextval, ${userId}, ${goodId})
+	</insert>
+
+	<delete id="deleteWinnersGood" parameterType="string">
+		DELETE FROM WINNER_TB
+		WHERE GOODNUM =#{goodId}
+	</delete>
+	
+	
+	
+	
+	<select id="selectGoodIdbyUserId" parameterType="String" resultType="String"> 
+	 	select goodNum
+	 	from enteruser_tb
+	 	where userId = #{userId}
+	</select>
+	
+	<select id="selectGoodByGoodId" parameterType="String" resultMap="goodMap"> 
+	 	<include refid="selectGood"/>
+	 	where goodNum = #{goodId}
+	</select>
+	
+
+
+</mapper>
