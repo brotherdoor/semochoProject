@@ -32,6 +32,12 @@
 			javaType="ArrayList" jdbcType="VARCHAR" />
 	</resultMap>
 	
+	<resultMap type="AccuseComment" id="accuseMap">
+		<id property="id" column="ACCUSENUM"/>
+		<result property="content" column="CONTENT"/>
+		<result property="writerId" column="userId"/>
+	</resultMap>
+	
 	
 	<sql id="selectPost">
 		SELECT postNum, userId, title, category, accuseCount, endDate
@@ -122,8 +128,8 @@
 		 WHERE userId = '${userId}' AND postId = ${postId}
 	</delete>
 	
-	<select id="selectContentByAccuse" parameterType="int" resultType="String">
-		SELECT content
+	<select id="selectContentByAccuse" parameterType="int" resultMap="accuseMap">
+		SELECT ACCUSENUM , CONTENT , USERID
 		FROM accuse_tb
 		WHERE postNum = #{postNum}
 	</select>

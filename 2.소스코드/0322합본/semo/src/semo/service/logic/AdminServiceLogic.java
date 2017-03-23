@@ -40,22 +40,21 @@ public class AdminServiceLogic implements AdminService{
 		List<Post> list = new ArrayList<>();
 		List<Post> accuses= new ArrayList<>();
 		
+		
 		//모든 게시물을 가져온다
 		list = postStore.selectAllPost();
+		
 		for(Post p : list){
 			//신고물 개수를 검사해서 리스트에 담는다.
 			if(p.getAccuseCount()>5){
+				p.setComments(postStore.selectContentByAccuse(p.getId()));		
 				accuses.add(p);
-			}
+				}
 		}
 		return accuses;
 	}
 
 	
-	@Override
-	public List<String>findAccuseContents(String postId){
-		return postStore.selectContentByAccuse(postId);
-	}
 
 	@Override
 	public void accuseReset(String postId) {

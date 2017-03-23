@@ -165,18 +165,7 @@ public class PostServiceLogic implements PostSevice{
 		postStore.deleteAlaming(userId, postId);
 	}
 
-	@Override
-	public List<Post> searchByAccuse() {
-		List<Post> posts = postStore.selectAllPost();
-		List<Post> list = new ArrayList<>();
-		
-		for(Post p : posts){
-			if(postStore.selectContentByAccuse(p.getId()).size() >= 5){
-				list.add(p);
-			}
-		}
-		return list;
-	}
+	
 
 	@Override
 	public void registerAccuse(String postId, String writerId, String content) {
@@ -188,12 +177,7 @@ public class PostServiceLogic implements PostSevice{
 	}
 
 	@Override
-	public void removeAccuse(String postId) {
-		postStore.deleteAccuse(postId);
-	}
-
-	@Override
-	public List<String> searchAccuseContent(String postId) {
+	public List<Comment> searchAccuseContent(String postId) {
 		return postStore.selectContentByAccuse(postId);
 	}
 	

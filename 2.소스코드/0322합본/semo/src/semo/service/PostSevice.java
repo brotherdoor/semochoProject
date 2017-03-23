@@ -27,9 +27,7 @@ public interface PostSevice {
 	void removeAlaming(String userId, String postId);
 	
 	//신고기능
-	List<Post> searchByAccuse();
 	void registerAccuse(String postId, String writerId, String content);
-	void removeAccuse(String postId);
-	List<String> searchAccuseContent(String postId);
+	List<Comment> searchAccuseContent(String postId);
 	
 }

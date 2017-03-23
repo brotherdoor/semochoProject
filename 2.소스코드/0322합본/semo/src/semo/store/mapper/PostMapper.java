@@ -30,7 +30,7 @@ public interface PostMapper {
 	void deleteAlaming(Map<String, Object> map);
 	
 //	Accuse
-	List<String> selectContentByAccuse(int postId);
+	List<Comment> selectContentByAccuse(int postId);
 	String checkAccuse(Map<String, Object> map);
 	void registerAccuse(Map<String, Object> map);
 	void deleteAccuse(int postId);

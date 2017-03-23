@@ -28,7 +28,7 @@ public interface PostStore {
 	void deleteAlaming(String userId, String postId);
 	
 //	Accuse
-	List<String> selectContentByAccuse(String postId);
+	List<Comment> selectContentByAccuse(String postId);
 	boolean checkAccuse(String postId, String userId);
 	void registerAccuse(String postId, String writerId, String content);
 	void deleteAccuse(String postId);

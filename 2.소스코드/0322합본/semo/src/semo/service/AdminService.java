@@ -9,7 +9,6 @@ import semo.domain.User;
 public interface AdminService {
 	
 	List<Post>findAccuseAll();
-	List<String>findAccuseContents(String postId);
 	void accuseReset(String postId);
 	void removePost(String postId);
 	void regiserGood(Good good);

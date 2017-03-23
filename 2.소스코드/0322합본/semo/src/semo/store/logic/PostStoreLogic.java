@@ -1,5 +1,6 @@
 package semo.store.logic;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -221,9 +222,9 @@ public class PostStoreLogic implements PostStore{
 	}
 
 	@Override
-	public List<String> selectContentByAccuse(String postId) {
+	public List<Comment> selectContentByAccuse(String postId) {
 		SqlSession session = factory.openSession();
-		List<String> list = null;
+		List<Comment> list = null;
 		try{
 			PostMapper mapper = session.getMapper(PostMapper.class);
 			list = mapper.selectContentByAccuse(Integer.parseInt(postId));
