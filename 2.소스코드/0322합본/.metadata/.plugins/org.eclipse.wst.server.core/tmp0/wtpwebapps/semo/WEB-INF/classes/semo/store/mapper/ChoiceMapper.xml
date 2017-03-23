@@ -10,7 +10,7 @@
 		<result property="content" column="content"/>
 		<association property="image" column="CHOICENUM"
 				select ="semo.store.mapper.ChoiceMapper.selectImage"
-				 javaType="Image" jdbcType="VARCHAR"/>
+				 javaType="Image" jdbcType="NUMERIC"/>
 		<collection property="users" column="CHOICENUM" ofType="String"
 					select ="semo.store.mapper.ChoiceMapper.selectUserByVote"
 					javaType="ArrayList" jdbcType="NUMERIC"/>
@@ -19,9 +19,15 @@
 	<resultMap type="Image" id="imagemap">
 		<id property="id" column="choicenum"/>
 		<result property="imageType" column="imageType"/>
-		<result property="imgaeName" column="imgaeName"/>
+		<result property="imageName" column="IMAGENAME"/>
 	</resultMap>
+
+	<delete id="deleteChoice" parameterType="int">
+		DELETE FROM choice_tb
+		WHERE postNum = #{num}
+	</delete>
 	
+
 
 	
 	<select id="selectUserByVote" parameterType="String" resultType="String">
@@ -38,8 +44,8 @@
 	
 	
 	<insert id="insertChoice" parameterType="hashmap" >
-		INSERT INTO Choice_tb (choicenum , postnum , content , imagetype, imagename)
-		VALUES (Choice_sq.nextval, #{postId}, #{choice.content}, #{choice.image.imageType}, #{choice.image.imageName})		
+		INSERT INTO Choice_tb (choicenum , postnum , content , imagetype, IMAGENAME)
+		VALUES (Choice_sq.nextval, ${postId}, '${choice.content}', '${choice.image.imageType}', '${choice.image.imageName}')		
 	</insert>
 
 
@@ -64,7 +70,7 @@
 			where choicenum = ${choiceId}
  		</selectKey>
 		INSERT INTO vote_tb (votenum, choicenum, userid,postnum)
-		VALUES (vote_sq.nextval, ${choiceId}, ${userId}, #{id} )
+		VALUES (vote_sq.nextval, ${choiceId}, '${userId}', #{id} )
 	</insert>
 	
 	
@@ -74,7 +80,11 @@
 		where postnum= #{postId} and userid =#{userId}
 	</select>
 	
-	
+	<select id="selectPostIdbyVoteUser" parameterType="String" resultType="String">
+		select postnum
+		from vote_tb
+		where userid = #{userid}
+	</select>
 	
 	
 	

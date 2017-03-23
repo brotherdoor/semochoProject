@@ -24,7 +24,7 @@
   	
   	<update id="updateGuestBook" parameterType="GuestBook">
  		UPDATE guestbook_tb
- 		SET contents=#{content}
+ 		SET contents = #{content}
  		WHERE gbnum = #{id}
  	</update>
  	
@@ -37,16 +37,23 @@
  		SELECT gbnum, userid, contents
  		FROM guestbook_tb
  	</sql>
- 	<select id="selectGuestBook" resultMap="guestBookMap">
+ 	<select id="selectGuestBook" parameterType="String" resultMap="guestBookMap">
  		<include refid="selectGuestBook"/>
+ 		Where semonum = #{semoHomeId}
  		ORDER BY gbnum DESC
  	</select>
  	
  	<resultMap type="SemoHome" id="semoHomeMap">
 		<id property="id" column="semonum"/>
-		<association property="user" column="userid"
+		<!-- <association property="user" column="id"
 			select="semo.store.mapper.UserMapper.searchUserById"
-			javaType="User" jdbcType="VARCHAR"/>
+			javaType="User" jdbcType="VARCHAR"/> -->
+		<!-- <collection property="posts" column="userid" ofType="Post" 
+			select="semo.store.mapper.PostMapper.findPostByWriterId"
+			javaType="ArrayList" jdbcType="VARCHAR"/>
+		<collection property="guestBooks" column="userid" ofType="GuestBook" 
+			select="semo.store.mapper.SemoHomeMapper.selectGuestBook"
+			javaType="ArrayList" jdbcType="VARCHAR"/> -->
 	</resultMap>
  	<select id="selectSemoHome" parameterType="String" resultMap="semoHomeMap"> <!-- 조금 이상 -->
  		SELECT semonum, userid
