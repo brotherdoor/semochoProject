@@ -10,6 +10,13 @@
 <fullyQualifiedTypeName name="semo.domain.Post"/>
 <fullyQualifiedTypeName name="semo.domain.Comment"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="semo.domain.User"/>
+<fullyQualifiedTypeName name="semo.service.logic.UserServiceLogic"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="semo.service.logic.AdminServiceLogic"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
 </qualifiedTypeNameHistroy>
