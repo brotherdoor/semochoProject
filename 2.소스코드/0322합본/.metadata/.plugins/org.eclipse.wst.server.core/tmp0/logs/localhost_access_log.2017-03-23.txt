@@ -1468,3 +1468,12 @@
 0:0:0:0:0:0:0:1 - - [23/Mar/2017:19:51:48 +0900] "GET /semo/assets/img/slimbox/closelabel.gif HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [23/Mar/2017:19:59:09 +0900] "GET /semo/portfolio-2-column.html HTTP/1.1" 404 1050
 0:0:0:0:0:0:0:1 - - [23/Mar/2017:19:59:09 +0900] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [23/Mar/2017:20:31:03 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [23/Mar/2017:20:31:04 +0900] "GET /semo/postRegister.jsp HTTP/1.1" 200 4591
+0:0:0:0:0:0:0:1 - - [23/Mar/2017:20:31:04 +0900] "GET /semo/assets/css/animate.css HTTP/1.1" 200 57187
+0:0:0:0:0:0:0:1 - - [23/Mar/2017:20:31:04 +0900] "GET /semo/assets/css/bootstrap.css HTTP/1.1" 200 122199
+0:0:0:0:0:0:0:1 - - [23/Mar/2017:20:31:04 +0900] "GET /semo/assets/css/nexus.css HTTP/1.1" 200 64144
+0:0:0:0:0:0:0:1 - - [23/Mar/2017:20:31:04 +0900] "GET /semo/assets/css/font-awesome.css HTTP/1.1" 200 26651
+0:0:0:0:0:0:0:1 - - [23/Mar/2017:20:31:04 +0900] "GET /semo/assets/css/responsive.css HTTP/1.1" 200 954
+0:0:0:0:0:0:0:1 - - [23/Mar/2017:20:31:04 +0900] "GET /semo/assets/css/custom.css HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [23/Mar/2017:20:31:05 +0900] "GET /semo/assets/img/hr.png HTTP/1.1" 200 933
