@@ -1,4 +1,4 @@
-package semo.Controller;
+package semo.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import semo.domain.User;
 import semo.service.UserService;
-import semo.service.Logic.UserServiceLogic;
+import semo.service.logic.UserServiceLogic;
 
 @WebServlet("/login.do")
 public class LoginController extends HttpServlet {

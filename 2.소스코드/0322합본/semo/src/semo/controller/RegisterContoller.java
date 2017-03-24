@@ -1,4 +1,4 @@
-package semo.Controller;
+package semo.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import semo.domain.User;
 import semo.service.UserService;
-import semo.service.Logic.UserServiceLogic;
+import semo.service.logic.UserServiceLogic;
 
 /**
  * Servlet implementation class RegisterContoller

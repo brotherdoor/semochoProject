@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="semo.store.mapper.PostMapper">
+
+	<resultMap type="Comment" id="commentMap">
+		<id property="id" column="commentNum"/>
+		<result property="content" column="contents"/>
+		<result property="writerId" column="userId"/>
+	</resultMap>
+	
+	<resultMap type="Post" id="postMap">
+		<id property="id" column="postnum"/>
+		<result property="writerId" column="userId"/>
+		<result property="title" column="title"/>
+		<result property="category" column="category"/>
+		<result property="endDate" column="enddate"/>
+		<result property="accuseCount" column="accuseCount"/>		
+		<collection property="comments" column="postnum" ofType="Comment"
+		    select="selectComments"
+			javaType="ArrayList" jdbcType="NUMERIC" />
+	</resultMap>
+	
+	<resultMap type="Choice" id="choiceMap">
+		<id property="id" column="choiceNum"/>
+		<result property="content" column="content"/>
+		<result property="writerId" column="userId"/>
+		<collection property="users" column="choiceNum" ofType="Post"
+			select="semo.store.mapper.ChoiceMapper"
+			javaType="ArrayList" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<resultMap type="AccuseComment" id="accuseMap">
+		<id property="id" column="ACCUSENUM"/>
+		<result property="content" column="CONTENT"/>
+		<result property="writerId" column="userId"/>
+	</resultMap>
+	
+	
+	<sql id="selectPost">
+		SELECT postNum, userId, title, category, accuseCount, endDate
+		FROM post_tb
+	</sql>
+	
+	<select id="selectComments" parameterType="int" resultMap="commentMap">
+		SELECT commentNum, contents, userId
+		FROM comment_tb
+		WHERE postNum = #{int}
+	</select>
+	
+	<insert id="insertComment" parameterType="hashmap">
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			select comment_sq.nextval FROM DUAL
+		</selectKey>
+	    INSERT INTO comment_tb (commentNum, contents, userId, postNum)
+		VALUES (#{id}, '${comment.content}', '${comment.writerId}', ${postId})
+	</insert>
+	
+	<delete id="deleteComment" parameterType="int">
+		DELETE FROM comment_tb
+		WHERE commentNum = #{int}
+	</delete>
+	
+	<delete id="deleteCommentByPostId" parameterType="int">
+		DELETE FROM comment_tb
+		WHERE postNum = #{int}
+	</delete>
+	
+	<select id="selectPostByCategory" parameterType="String" resultMap="postMap">
+		<include refid="selectPost"/>
+		WHERE category = #{category}
+	</select>
+	
+	<select id="selectPostByWriterId" parameterType="String" resultMap="postMap">
+		<include refid="selectPost"/>
+		WHERE userId = #{writerId}
+	</select>
+	
+	<select id="selectPostByTitle" parameterType="map" resultMap="postMap">
+		<include refid="selectPost"/>
+		WHERE title LIKE '%${title}%'
+	</select>
+	
+	<select id="selectPost"  parameterType="int" resultMap="postMap">
+		<include refid="selectPost"/>
+		WHERE postNum = #{int}
+	</select>
+	
+	<select id="selectAllPost" resultMap="postMap">
+		<include refid="selectPost"/>
+	</select>
+	
+	<insert id="insertPost" parameterType="Post">
+		INSERT INTO post_tb (postNum, userId, title, category, accuseCount, endDate)
+		VALUES (post_sq.nextval, #{writerId}, #{title}, #{category}, 0, #{endDate})
+		<selectKey keyProperty="id" resultType="String" order="AFTER"> 
+			SELECT post_sq.currval FROM dual 
+		</selectKey>
+	</insert>
+	<update id="updatePost" parameterType="Post">
+		UPDATE post_tb 
+		SET title = #{title}, category = #{category} , userId =  #{writerId}, accuseCount = #{accuseCount} , endDate = #{endDate}
+		WHERE postNum = #{id}
+	</update>
+	
+	<delete id="deletePost" parameterType="int">
+		DELETE FROM post_tb
+		WHERE postNum = #{int}
+	</delete>
+	
+	<select id="selectAlaming" parameterType="String" resultType="String">
+		SELECT postId
+		FROM alaming_tb
+		WHERE userId = #{id}
+	</select>
+	<insert id="insertAlaming" parameterType="map">
+		INSERT INTO alaming_tb (alamNum, userId, postId)
+		VALUES (alaming_sq.nextval, '${userId}', ${postId})
+	</insert>
+	
+	<delete id="deleteAlaming" parameterType="map">
+		 DELETE FROM alaming_tb
+		 WHERE userId = '${userId}' AND postId = ${postId}
+	</delete>
+	
+	<select id="selectContentByAccuse" parameterType="int" resultMap="accuseMap">
+		SELECT ACCUSENUM , CONTENT , USERID
+		FROM accuse_tb
+		WHERE postNum = #{postNum}
+	</select>
+	
+	<select id="checkAccuse" parameterType="map" resultType="String">
+		SELECT content
+		FROM accuse_tb
+		WHERE postNum = ${postNum} AND userId = '${userId}'
+	</select>
+	
+	<insert id="registerAccuse" parameterType="map">
+		INSERT INTO accuse_tb (accuseNum, content, postNum, userId)
+		VALUES (accuse_sq.nextval, '${content}', '${postNum}', '${userId}')
+	</insert>
+	
+	<delete id="deleteAccuse" parameterType="int">
+		DELETE FROM accuse_tb
+		WHERE postNum = #{postNum}
+	</delete>
+	
+	<update id="updateAccusePostTb" parameterType="int">
+		UPDATE post_tb 
+		SET accuseCount = (SELECT accuseCount FROM post_tb WHERE postNum = #{postNum} )+1
+		WHERE postNum = #{postNum}
+	</update>
+  	
+</mapper>
