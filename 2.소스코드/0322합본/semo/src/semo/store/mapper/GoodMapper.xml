@@ -12,14 +12,18 @@
 		<result property="product" column="product" />
 		<result property="startDate" column="startDate" />
 		<result property="endDate" column="endDate" />
-		<association property="image" javaType="image"/>
+		<result property="useSemo" column="price"/>
+		<association property="image" column="goodnum"
+				select ="selectImage"
+				 javaType="Image" jdbcType="NUMERIC"/>
 	</resultMap>
 
 
-	<resultMap type="Image" id="image">
+	<resultMap type="Image" id="imagemap">
 		<id property="id" column="goodNum"/>
 		<result property="imageType" column="imageType" />
 		<result property="imageName" column="imageName" />
+		
 	</resultMap>
 
 
@@ -28,13 +32,22 @@
 
 	<sql id="selectGood">
 		SELECT goodNum, title, contents, product, startDate,
-		endDate, imageType, imageName
+		endDate, imageType, imageName, price
 		FROM good_tb
 	</sql>
 	<sql id = "selectwin">
 		select id, pw, name, birth, phonenumber, interest, email, gender, grade, semo
 		from user_tb
 	</sql>
+	
+	
+	<select id="selectImage" parameterType="String" resultMap="imagemap">
+		select goodNUM, IMAGETYPE, IMAGENAME
+		from good_tb
+		where goodNUM = #{goodId}
+	</select>
+	
+	
 
 	
 	<select id="selectAllGood" resultMap="goodMap">
@@ -42,10 +55,10 @@
 	</select>
 
 	<insert id="insertGood" parameterType="hashmap">
-		INSERT INTO good_tb (goodNum, title, contents, product, startDate, endDate, imageType, imageName)
+		INSERT INTO good_tb (goodNum, title, contents, product, startDate, endDate, imageType, imageName, price)
 		VALUES (good_sq.nextval, #{title}, #{content}, 
 		#{product}, #{startDate}, #{endDate}, #{image.imageType},
-		#{image.imageName})
+		#{image.imageName}, #{useSemo}) 
 	</insert>
 
 	<delete id="deleteGood" parameterType="string">
