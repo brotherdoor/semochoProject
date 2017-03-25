@@ -1,0 +1,1 @@
+${ctx }/grade.do?writerId=${comment.writerId }
