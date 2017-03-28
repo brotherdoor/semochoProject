@@ -1,5 +1,0 @@
-package store.mapper;
-
-public interface templeteMapper {
-
-}

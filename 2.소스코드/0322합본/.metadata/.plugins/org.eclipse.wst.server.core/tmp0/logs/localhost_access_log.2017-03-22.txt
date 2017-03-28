@@ -1,5 +1,0 @@
-127.0.0.1 - - [22/Mar/2017:11:09:47 +0900] "GET / HTTP/1.1" 404 994
-0:0:0:0:0:0:0:1 - - [22/Mar/2017:11:09:49 +0900] "GET /semo/adminsterList.jsp HTTP/1.1" 200 2955
-0:0:0:0:0:0:0:1 - - [22/Mar/2017:11:09:49 +0900] "GET /semo/resources/css/layout.css HTTP/1.1" 404 1052
-0:0:0:0:0:0:0:1 - - [22/Mar/2017:11:09:49 +0900] "GET /semo/resources/css/bootstrap_modify.css HTTP/1.1" 404 1072
-0:0:0:0:0:0:0:1 - - [22/Mar/2017:11:09:49 +0900] "GET /semo/resources/js/jquery-2.1.3.js HTTP/1.1" 404 1060
