@@ -1,5 +1,0 @@
-package semo.store.mapper;
-
-public interface templeteMapper {
-
-}

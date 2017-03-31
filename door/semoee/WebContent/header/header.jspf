@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<c:set var='ctx' value="${pageContext.request.contextPath }" />
+<header>
+	<div name="header" class="container">
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+			<h1>
+				<a class="navbar-brand" href="main.do">SEMOCHO</a>
+			</h1>
+			<div class="text-right">
+				<form class="form-inline my-2 my-lg-0" style="padding-top: 7px;" method="post" action="postTitle.do">
+					<input class="form-control mr-sm-2" type="text" name="title"
+						placeholder="Search">
+					<input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">
+				</form>
+				<div>
+					<c:choose>
+						<c:when test="${loginUser eq null }">
+							<a href="login.jsp">로그인</a> | <a href="join.jsp">회원 가입</a>
+						</c:when>
+						<c:otherwise>
+							<b>${loginUser.name }</b>님 !! 환영합니다. [<a href="logout.do">로그아웃</a>] [<a
+								href=".alamingList.do">알리미</a>] 
+       						<a href="semoMain.do?id=${loginUser.id }" class="fa-home ">홈</a>
+						</c:otherwise>
+					</c:choose>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- Header -->
+	<div id="header" style="background-position: 50% 0%; height: 60%;"
+		data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row">
+				<!-- Logo -->
+				<div class="logo">
+					<!-- <a href="index.html" title=""> <img
+							src="assets/img/%EA%B7%B8%EB%A6%BC1.png"
+							style="width: 400px; height: 228px;" alt="Logo" />
+						</a> -->
+				</div>
+				<!-- End Logo -->
+			</div>
+			<!-- Top Menu -->
+			<div id="hornav" class="row text-light">
+				<div class="col-md-12">
+					<div class="text-center"></div>
+				</div>
+			</div>
+			<!-- End Top Menu -->
+		</div>
+	</div>
+	<!-- End Header -->
+</header>

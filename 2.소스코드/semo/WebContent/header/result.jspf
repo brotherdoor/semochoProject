@@ -1,0 +1,194 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div class="blog">
+							<div class="clearfix">
+								<div class="blog-post-body row margin-top-15">
+									<div class="row">
+										<div class="col-md-15">
+											<div class="tab-content">
+												<div class="tab-pane active in fade" id="faq" >
+													<div class="panel-group" id="accordion">
+														<!-- FAQ Item -->
+
+
+
+
+														<div class="panel panel-default panel-faq">
+															<div class="panel-heading">
+																<div data-toggle="collapse" data-parent="#accordion" href="#faq-sub-1" >
+																
+																	<h4 class="panel-title">전체 투표  결과</h4>
+																</div>
+																
+																
+															</div>
+															<div id="faq-sub-1" class="panel-collapse collapse">
+																	<div class="panel-body">																
+																		<div id="chart"></div>
+																		<script>
+																												var options = {
+																													 'legend':{
+																															names: [[${Ltotal}], [${Rtotal}] ]
+																														},
+																											 
+																													'dataset': {
+																														title: '전체 투표결과',
+																														values:[${Ltotal}, ${Rtotal} ],
+																														colorset: ['#56b4e9', '#0072b2'],
+																														fields: ['왼쪽 ${Ltotal}' , '오른쪽  ${Rtotal}'],
+																														opacity:[0.9]
+																													}, 
+																													'core_circle_value' : [${total} ],
+																													'donut_width' : 100, 
+																													'core_circle_radius':35,
+																													'chartDiv': 'chart',
+																													'chartType': 'pie',
+																													'chartSize': {width:600, height:400}
+																												};
+						
+																												Nwagon.chart(options);
+																											
+																				 
+																					</script>
+																	</div>
+																</div>
+															
+															
+														</div>
+														
+														
+														
+														
+														<div class="panel panel-default panel-faq">
+															<div class="panel-heading">
+																<div data-toggle="collapse" data-parent="#accordion"
+																	href="#faq-sub-2">
+																	<h4 class="panel-title">남 여 투표  결과</h4>
+																</div>
+															</div>
+															<div id="faq-sub-2" class="panel-collapse collapse">
+																<div class="panel-body">
+
+																	<div id="Nwagon11" class="text-left"></div>
+																	
+																	<script>
+																		    var options = {
+	 																	       'legend':{
+																	            names: [['남${m}'], ['여 ${w}']]
+																			        },
+	   																			     'dataset': {
+	   																			            title: '남여 투표결과',
+	   																			          values: [[100],[100]],
+	   																			              degree_values:[${m}, ${w}],
+	   																				              colorset: ['blue', 'red'], //color-blind safe colors 
+	   																					               fields: ['남${m}', '여 ${w}'],
+	   																						               opacity:[0.9]
+	   																		             },
+	   																		          'core_circle_value' : [${total}],
+	   																				             'core_circle_radius':35,
+	   																					             'maxValue' : 100,
+	   																						              'increment' : 100,
+	   																							              'chartDiv': 'Nwagon11',
+	   																								              'chartType': 'polar_pie',
+	   																									              'chartSize': {width:700, height:400}
+	   																			           };
+																	           Nwagon.chart(options);
+																		         </script>
+															
+														
+															
+															
+																	</div>
+																</div>
+
+
+															</div>
+														
+														
+														
+													
+														
+														
+														<div class="panel panel-default panel-faq">
+															<div class="panel-heading">
+																<div data-toggle="collapse" data-parent="#accordion"
+																	href="#faq-sub-3">
+																	<h4 class="panel-title">연령별  투표 결과</h4>
+																</div>
+															</div>
+															<div id="faq-sub-3" class="panel-collapse collapse">
+																<div class="panel-body">
+
+					<div id="chart17"></div>
+	 <script>
+		var options = {
+			'legend':{
+				names: ['10대', '20대', '30대', '40대', '50대'],
+				hrefs: []
+					},
+			'dataset':{
+				title:'Playing time per day', 
+				values: [[${aL}, ${AR}], [${bL}, ${BR}], [${cL}, ${CR}], [${dL}, ${DR}], [${eL}, ${ER}] ],
+				colorset: ['#DC143C','#FF8C00'],
+				fields:['왼쪽', '오른쪽']
+				},
+			'chartDiv' : 'chart17',
+			'chartType' : 'stacked_column',
+			 'chartSize': {width:700, height:200},
+			'maxValue' : ${total},
+			'increment' : 3
+		};
+
+		Nwagon.chart(options);
+
+	</script>
+																	
+					
+					
+					
+												
+													
+													
+															
+															</div>
+																	</div>
+																</div>
+
+
+															</div>
+														
+											
+
+
+
+
+
+
+
+
+
+														
+														
+													</div>
+
+
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+						<!-- End Blog Item Body -->

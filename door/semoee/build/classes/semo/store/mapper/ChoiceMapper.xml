@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="semo.store.mapper.ChoiceMapper">
+
+	<resultMap type="Choice" id="choicemap">
+		<id property="id" column="choicenum"/>
+		<result property="content" column="content"/>
+		<association property="image" column="CHOICENUM"
+				select ="semo.store.mapper.ChoiceMapper.selectImage"
+				 javaType="Image" jdbcType="NUMERIC"/>
+		<collection property="users" column="CHOICENUM" ofType="String"
+					select ="semo.store.mapper.ChoiceMapper.selectUserByVote"
+					javaType="ArrayList" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<resultMap type="Image" id="imagemap">
+		<id property="id" column="choicenum"/>
+		<result property="imageType" column="imageType"/>
+		<result property="imageName" column="IMAGENAME"/>
+	</resultMap>
+
+	<delete id="deleteChoice" parameterType="int">
+		DELETE FROM choice_tb
+		WHERE postNum = #{num}
+	</delete>
+	
+
+
+	
+	<select id="selectUserByVote" parameterType="String" resultType="String">
+		select userid
+		from vote_tb
+		where CHOICENUM = #{CHOICENUM}
+	</select>
+	
+	<select id="selectImage" parameterType="String" resultMap="imagemap">
+		select CHOICENUM, IMAGETYPE, IMAGENAME
+		from choice_tb
+		where CHOICENUM = #{CHOICENUM}
+	</select>
+	
+	
+	<insert id="insertChoice" parameterType="hashmap" >
+		INSERT INTO Choice_tb (choicenum , postnum , content , imagetype, IMAGENAME)
+		VALUES (Choice_sq.nextval, ${postId}, '${choice.content}', '${choice.image.imageType}', '${choice.image.imageName}')		
+	</insert>
+
+
+
+
+	<select id="selectChoice" parameterType="String" resultMap="choicemap">
+		select CHOICENUM, POSTNUM, CONTENT
+		from choice_tb
+		where postnum = #{postId}
+	</select>
+	
+	<select id="selectVoteUsers" parameterType="String" resultType="String">
+		select userid
+		from vote_tb
+		where CHOICENUM = #{choiceId}
+	</select>
+	
+	<insert id="insertVoteUser" parameterType="hashmap" >
+		<selectKey keyProperty="id" resultType="int" order="BEFORE">
+			SELECT postnum
+			from choice_tb
+			where choicenum = ${choiceId}
+ 		</selectKey>
+		INSERT INTO vote_tb (votenum, choicenum, userid, postnum)
+		VALUES (vote_sq.nextval, ${choiceId}, '${userId}', #{id} )
+	</insert>
+	
+	
+	<select id="checkVote" parameterType="map" resultType="String">
+		select votenum
+		from vote_tb
+		where postnum= #{postId} and userid =#{userId}
+	</select>
+	
+	<select id="selectPostIdbyVoteUser" parameterType="String" resultType="String">
+		select postnum
+		from vote_tb
+		where userid = #{userid}
+	</select>
+	
+	
+	
+	
+</mapper>
